@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 6 - Attributs ID et Class</title>
+</head>
+<body>
+    <h1>Exercice sur les attributs ID et Class</h1>
+    
+    <h2>Utilisation des ID</h2>
+    <div id="contenu-principal">
+        <p>Ce paragraphe se trouve dans le div avec l'ID "contenu-principal". Un ID doit être unique dans la page.</p>
+    </div>
+    
+    <h3 id="titre-special">Titre spécial</h3>
+    
+    <p id="intro">Ce paragraphe d'introduction a un ID unique qui permet de le cibler spécifiquement.</p>
+    
+    <h2>Utilisation des Classes</h2>
+    <div class="card">
+        <h4 class="card-title">Première carte</h4>
+        <p class="card-content">Contenu de la première carte. Les classes peuvent être réutilisées sur plusieurs éléments.</p>
+    </div>
+    
+    <div class="card">
+        <h4 class="card-title">Deuxième carte</h4>
+        <p class="card-content">Contenu de la deuxième carte avec les mêmes classes que la première.</p>
+    </div>
+    
+    <h2>Combinaison d'ID et Class</h2>
+    <div id="sidebar" class="panel">
+        <p>Cet élément a à la fois un ID unique ("sidebar") et une classe ("panel") qui peut être partagée.</p>
+    </div>
+    
+    <h2>Classes multiples</h2>
+    <p class="texte important urgent">Ce paragraphe a trois classes différentes appliquées simultanément.</p>
+    
+    <span class="label primary">Badge principal</span>
+    
+    <h2>Liens vers des éléments avec ID</h2>
+    <a href="#contenu-principal">Aller au contenu principal</a><br>
+    <a href="#titre-special">Aller au titre spécial</a><br>
+    
+    <div style="margin-top: 40px; padding: 20px; border: 1px solid #ccc;">
+        <h3>Questions de réflexion :</h3>
+        <p>La différence principale entre id et class est qu'un ID doit être unique dans la page (un seul élément peut l'avoir), tandis qu'une classe peut être appliquée à plusieurs éléments.</p>
+        
+        <p>Non, on ne peut pas avoir plusieurs éléments avec le même id car cela violerait les standards HTML et pourrait causer des problèmes de navigation et de JavaScript.</p>
+        
+        <p>Oui, plusieurs éléments peuvent avoir la même class. C'est même le but principal des classes : permettre de styliser ou de cibler un groupe d'éléments similaires. Exemple : tous les boutons d'une page peuvent avoir la classe "btn".</p>
+    </div>
+    
+    <p><a href="../index.html">← Retour à la liste des exercices</a></p>
+</body>
+</html>

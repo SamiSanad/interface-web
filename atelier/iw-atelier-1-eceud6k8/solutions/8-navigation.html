@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 8 - Navigation avancée</title>
+</head>
+<body>
+    <header>
+        <h1>Navigation avancée et ancres</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#chapitre1">Chapitre 1</a></li>
+                <li><a href="#chapitre2">Chapitre 2</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Bienvenue dans ce guide sur la navigation avancée en HTML. Nous allons explorer les différentes façons de créer des liens efficaces et une navigation fluide.</p>
+        <p>La navigation par ancres permet de créer des liens vers des sections spécifiques d'une même page, améliorant l'expérience utilisateur sur les pages longues.</p>
+        
+        <a href="#chapitre1">Aller au chapitre 1</a>
+    </section>
+    
+    <div style="height: 300px; background-color: #f5f5f5; padding: 20px; margin: 20px 0;">
+        <p>Espace volontaire pour tester la navigation par ancres...</p>
+    </div>
+    
+    <section id="chapitre1">
+        <h2>Chapitre 1 : Les bases</h2>
+        <p>Les liens HTML sont créés avec la balise &lt;a&gt; et l'attribut href. Ils permettent de naviguer entre les pages, vers des sites externes, ou vers des sections de la même page.</p>
+        <p>Les chemins peuvent être absolus (avec le protocole complet) ou relatifs (par rapport à la page actuelle).</p>
+        <p>Il est important de toujours fournir un texte descriptif pour les liens afin d'améliorer l'accessibilité.</p>
+        
+        <nav>
+            <a href="#introduction">← Introduction</a> | 
+            <a href="#chapitre2">Chapitre 2 →</a> | 
+            <a href="#conclusion">Conclusion</a>
+        </nav>
+    </section>
+    
+    <div style="height: 300px; background-color: #e8f4f8; padding: 20px; margin: 20px 0;">
+        <p>Autre espace pour la navigation...</p>
+    </div>
+    
+    <section id="chapitre2">
+        <h2>Chapitre 2 : Techniques avancées</h2>
+        <p>Les techniques avancées incluent l'utilisation d'ancres, de liens vers des adresses email (mailto:), des numéros de téléphone (tel:), et la gestion des liens externes.</p>
+        <p>Pour en savoir plus sur les ancres, consultez cette ressource externe :</p>
+        <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/a#linking_to_an_element_on_the_same_page" target="_blank">Documentation MDN sur les ancres</a>
+    </section>
+    
+    <div style="height: 200px; background-color: #fff3cd; padding: 20px; margin: 20px 0;">
+        <p>Dernier espace de test...</p>
+    </div>
+    
+    <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>La maîtrise des liens et de la navigation est essentielle pour créer des sites web utilisables et accessibles.</p>
+        <p>Continuez à pratiquer avec différents types de liens pour bien comprendre leurs subtilités.</p>
+        
+        <a href="#top">Retour au top</a>
+    </section>
+    
+    <footer style="margin-top: 50px; padding: 20px; background-color: #333; color: white;">
+        <h3>Menu de navigation rapide</h3>
+        <ul>
+            <li><a href="#introduction" style="color: white;">Introduction</a></li>
+            <li><a href="#chapitre1" style="color: white;">Chapitre 1</a></li>
+            <li><a href="#chapitre2" style="color: white;">Chapitre 2</a></li>
+            <li><a href="#conclusion" style="color: white;">Conclusion</a></li>
+        </ul>
+        
+        <p><a href="../index.html" style="color: white;">← Retour à la page d'accueil</a></p>
+        
+        <p>Liens vers d'autres exercices :</p>
+        <ul>
+            <li><a href="semantique.html" style="color: white;">Exercice sur les balises sémantiques</a></li>
+            <li><a href="liens/index.html" style="color: white;">Exercice sur les liens</a></li>
+        </ul>
+    </footer>
+    
+    <div style="margin: 20px 0; padding: 15px; border: 2px solid #28a745;">
+        <h3>Expérimentation avec les fragments d'URL :</h3>
+        <p>Quand on ajoute #introduction à la fin de l'URL, la page fait défiler automatiquement jusqu'à l'élément avec l'id "introduction". C'est très utile pour la navigation interne.</p>
+        
+        <p>Exemple de lien complexe avec fragment : 
+            <a href="attributs.html#contenu-principal">Aller à la section contenu principal de l'exercice attributs</a>
+        </p>
+    </div>
+</body>
+</html>

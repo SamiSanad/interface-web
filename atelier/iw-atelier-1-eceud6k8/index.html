@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier HTML - Liste des exercices</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .instructions {
+            background: #f8f9fa;
+            border-left: 4px solid #4CAF50;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .instructions strong {
+            color: #2c3e50;
+        }
+        
+        .task-list { 
+            list-style: none; 
+            padding: 0; 
+            display: grid;
+            gap: 20px;
+        }
+        
+        .task-item { 
+            background: #fff;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .task-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: #4CAF50;
+        }
+        
+        .task-item.completed {
+            border-color: #4CAF50;
+            background: linear-gradient(135deg, #f8fff8 0%, #e8f5e8 100%);
+        }
+        
+        .task-item.completed::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #4CAF50;
+        }
+        
+        .status { 
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px; 
+            height: 24px; 
+            border-radius: 50%; 
+            margin-right: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        .completed { 
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+        }
+        
+        .completed::after {
+            content: '✓';
+        }
+        
+        .incomplete { 
+            background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+            box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3);
+        }
+        
+        .incomplete::after {
+            content: '!';
+        }
+        
+        .task-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        
+        .task-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .task-description { 
+            margin-top: 8px; 
+            font-size: 14px; 
+            color: #6c757d;
+            line-height: 1.5;
+        }
+        
+        .task-file {
+            margin-top: 6px;
+            font-size: 13px;
+            color: #495057;
+            font-weight: 500;
+        }
+        
+        .task-file code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #e83e8c;
+        }
+        
+        .exercise-link { 
+            text-decoration: none; 
+            font-weight: 600; 
+            color: #0066cc;
+            transition: color 0.3s ease;
+        }
+        
+        .exercise-link:hover { 
+            color: #004499;
+            text-decoration: underline;
+        }
+        
+        .resources {
+            margin-top: 40px;
+            padding: 25px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-radius: 12px;
+            border-left: 4px solid #2196F3;
+        }
+        
+        .resources h3 {
+            color: #1565C0;
+            margin-bottom: 15px;
+        }
+        
+        .resources code {
+            background: rgba(255,255,255,0.8);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .progress-bar {
+            background: #e9ecef;
+            border-radius: 10px;
+            height: 8px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: linear-gradient(90deg, #4CAF50 0%, #45a049 100%);
+            height: 100%;
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+        
+        .progress-text {
+            text-align: center;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-top: 10px;
+        }
+        
+        .validation-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .validate-button {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+        
+        .validate-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+        }
+        
+        .validate-button:active {
+            transform: translateY(0);
+        }
+        
+        .validation-results {
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        .validation-message {
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .validation-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .validation-partial {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        
+        .validation-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .validation-icon {
+            margin-right: 8px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Atelier HTML - Exercices pratiques</h1>
+            <p>Maîtrisez les fondamentaux du HTML étape par étape</p>
+        </div>
+        
+        <div class="content">
+            <div class="instructions">
+                <p><strong>Instructions :</strong> Complétez chaque exercice dans l'ordre. Revenez sur cette page pour vérifier votre progression. Les indicateurs verts montrent les exercices réussis, les rouges ceux à compléter.</p>
+            </div>
+            
+            <div class="validation-section">
+                <button id="validateBtn" class="validate-button">
+                    🔍 Valider tous les exercices
+                </button>
+                <div id="validationResults" class="validation-results"></div>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">0 / 8 exercices complétés</div>
+
+            <ul class="task-list">
+                <li class="task-item" id="taskItem1">
+                    <div class="task-header">
+                        <span class="status incomplete" id="task1"></span>
+                        <div>
+                            <div class="task-title">Exercice 1 : 
+                                <a href="exercices/1-structure.html" class="exercise-link">Structure d'un document HTML</a>
+                            </div>
+                            <div class="task-file">📁 Fichier : <a href="exercices/1-structure.html" class="exercise-link"><code>1-structure.html</code></a></div>
+                            <div class="task-description">
+                                Complétez la structure de base d'un document HTML avec tous les éléments essentiels
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="task-item" id="taskItem2">
+                    <div class="task-header">
+                        <span class="status incomplete" id="task2"></span>
+                        <div>
+                            <div class="task-title">Exercice 2 : 
+                                <a href="exercices/2-balises-base.html" class="exercise-link">Balises de base et hiérarchie</a>
+                            </div>
+                            <div class="task-file">📁 Fichier : <a href="exercices/2-balises-base.html" class="exercise-link"><code>2-balises-base.html</code></a></div>
+                            <div class="task-description">
+                                Créez une hiérarchie de contenu avec titres, paragraphes et mise en forme
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="task-item" id="taskItem3">
+                    <div class="task-header">
+                        <span class="status incomplete" id="task3"></span>
+                        <div>
+                            <div class="task-title">Exercice 3 : 
+                                <a href="exercices/3-listes.html" class="exercise-link">Listes HTML</a>
+                            </div>
+                            <div class="task-file">📁 Fichier : <a href="exercices/3-listes.html" class="exercise-link"><code>3-listes.html</code></a></div>
+                            <div class="task-description">
+                                Créez différents types de listes : à puces, numérotées et de définitions
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="task-item" id="taskItem4">
+                    <div class="task-header">
+                        <span class="status incomplete" id="task4"></span>
+                        <div>
+                            <div class="task-title">Exercice 4 : 
+                                <a href="exercices/4-images.html" class="exercise-link">Images et attributs</a>
+                            </div>
+                            <div class="task-file">📁 Fichier : <a href="exercices/4-images.html" class="exercise-link"><code>4-images.html</code></a></div>
+                            <div class="task-description">
+                                Intégrez des images avec les bons attributs et comprenez les chemins
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="task-item" id="taskItem5">
+                    <div class="task-header">
+                        <span class="status incomplete" id="task5"></span>
+                        <div>
+                            <div class="task-title">Exercice 5 : 
+                                <a href="exercices/5-liens/index.html" class="exercise-link">Navigation et liens</a>
+                            </div>
+                            <div class="task-file">📁 Fichiers : <a href="exercices/5-liens/index.html" class="exercise-link"><code>5-liens/index.html</code></a>, <a href="exercices/5-liens/page1.html" class="exercise-link"><code>page1.html</code></a>, <a href="exercices/5-liens/sous-dossier/page2.html" class="exercise-link"><code>sous-dossier/page2.html</code></a></div>
+                            <div class="task-description">
+                                Créez différents types de liens : internes, externes, email et téléphone
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="task-item" id="taskItem6">
+                    <div class="task-header">
+                        <span class="status incomplete" id="task6"></span>
+                        <div>
+                            <div class="task-title">Exercice 6 : 
+                                <a href="exercices/6-attributs.html" class="exercise-link">Attributs ID et Class</a>
+                            </div>
+                            <div class="task-file">📁 Fichier : <a href="exercices/6-attributs.html" class="exercise-link"><code>6-attributs.html</code></a></div>
+                            <div class="task-description">
+                                Utilisez les identifiants et classes, comprenez leurs différences
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="task-item" id="taskItem7">
+                    <div class="task-header">
+                        <span class="status incomplete" id="task7"></span>
+                        <div>
+                            <div class="task-title">Exercice 7 : 
+                                <a href="exercices/7-semantique.html" class="exercise-link">Balises sémantiques HTML5</a>
+                            </div>
+                            <div class="task-file">📁 Fichier : <a href="exercices/7-semantique.html" class="exercise-link"><code>7-semantique.html</code></a></div>
+                            <div class="task-description">
+                                Structurez une page avec les balises sémantiques modernes
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="task-item" id="taskItem8">
+                    <div class="task-header">
+                        <span class="status incomplete" id="task8"></span>
+                        <div>
+                            <div class="task-title">Exercice 8 : 
+                                <a href="exercices/8-navigation.html" class="exercise-link">Navigation avancée et ancres</a>
+                            </div>
+                            <div class="task-file">📁 Fichier : <a href="exercices/8-navigation.html" class="exercise-link"><code>8-navigation.html</code></a></div>
+                            <div class="task-description">
+                                Créez une navigation avec ancres internes et liens vers fragments
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="resources">
+                <h3>📚 Ressources supplémentaires</h3>
+                <p>Une fois tous les exercices terminés, consultez le dossier <code>solutions/</code> pour comparer vos réponses.</p>
+                <p><strong>Rappel :</strong> Les types d'éléments à retenir :</p>
+                <ul style="margin-top: 10px;">
+                    <li><strong>Bloc :</strong> prennent toute la largeur disponible et créent une nouvelle ligne</li>
+                    <li><strong>Inline :</strong> s'affichent sur la même ligne et prennent seulement l'espace nécessaire</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="validation.js"></script>
+</body>
+</html>

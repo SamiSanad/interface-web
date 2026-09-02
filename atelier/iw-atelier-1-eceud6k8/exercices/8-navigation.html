@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 8 - Navigation avancée</title>
+</head>
+<body>
+    <header>
+        <h1>Navigation avancée et ancres</h1>
+        
+        <!-- TODO: Créez une navigation avec des ancres vers les sections de cette page -->
+        <!-- Liens vers : #introduction, #chapitre1, #chapitre2, #conclusion -->
+        <nav>
+            <a href="#introduction">Aller à l'introduction</a>
+            <a href="#chapitre1">Aller au chapitre1</a>
+            <a href="#chapitre2">Aller au chapitre2</a>
+            <a href="#conclusion">Aller à la conclusion</a>
+        </nav>
+    </header>
+    
+    <!-- TODO: Ajoutez une section avec l'identifiant "introduction" -->
+    <section id="introduction">
+        <!-- TODO: Titre de niveau 2 : "Introduction" -->
+        <h2>Introduction</h2>
+        <!-- TODO: Contenu de l'introduction (2 paragraphes) -->
+        <p>J'introduis quelque chose.</p>
+        <p>Je suis encore en train d'introduire quelque chose.</p>
+        <!-- TODO: Ajoutez un lien vers #chapitre1 avec le texte "Aller au chapitre 1" -->
+        <a href="#chapitre1">Aller au chapitre 1</a>
+    <!-- TODO: Fermez la section -->
+    </section>
+
+    <div style="height: 300px; background-color: #f5f5f5; padding: 20px; margin: 20px 0;">
+        <p>Espace volontaire pour tester la navigation par ancres...</p>
+    </div>
+    
+    <!-- TODO: Ajoutez une section avec l'identifiant "chapitre1" -->
+    <section id="chapitre1">
+        <!-- TODO: Titre de niveau 2 : "Chapitre 1 : Les bases" -->
+        <h2>Chapitre 1 : Les bases</h2>
+        <!-- TODO: Contenu du chapitre (3 paragraphes) -->
+        <p>Le karaté est un art martial Japonais.</p>
+        <!-- TODO: Ajoutez des liens de navigation vers les autres sections -->
+        <nav>
+            <a href="#introduction">Aller à l'introduction</a>
+            <a href="#chapitre2">Aller au chapitre2</a>
+            <a href="#conclusion">Aller à la conclusion</a>
+        </nav>
+    <!-- TODO: Fermez la section -->
+</section>
+    <div style="height: 300px; background-color: #e8f4f8; padding: 20px; margin: 20px 0;">
+        <p>Autre espace pour la navigation...</p>
+    </div>
+    
+    <!-- TODO: Ajoutez une section avec l'identifiant "chapitre2" -->
+    <section id="chapitre2">
+        <!-- TODO: Titre de niveau 2 : "Chapitre 2 : Techniques avancées" -->
+        <h2>Chapitre 2 : Techniques avancées</h2>
+        <!-- TODO: Contenu du chapitre -->
+        <p>On peut réaliser des coups de poings crochet et des coups de pieds fouettés.</p>
+        <!-- TODO: Ajoutez un lien externe vers https://developer.mozilla.org/fr/docs/Web/HTML/Element/a#linking_to_an_element_on_the_same_page -->
+        <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/a#linking_to_an_element_on_the_same_page" target="_blank" rel="noopener noreferrer"> Vers le site mozilla</a>
+        <!-- Ce lien doit s'ouvrir dans un nouvel onglet -->
+    <!-- TODO: Fermez la section -->
+</section>
+    <div style="height: 200px; background-color: #fff3cd; padding: 20px; margin: 20px 0;">
+        <p>Dernier espace de test...</p>
+    </div>
+    
+    <!-- TODO: Ajoutez une section avec l'identifiant "conclusion" -->
+    <section id="conclusion">
+        <!-- TODO: Titre de niveau 2 : "Conclusion" -->
+        <h2>Conclusion</h2>
+        <!-- TODO: Contenu de conclusion -->
+        <p>En conclusion, je conclus.</p>
+        <!-- TODO: Ajoutez un lien "Retour au top" qui pointe vers le début de la page -->
+        <!-- Utilisez le bon attribut avec "#" ou "#top" -->
+        <a href="#top">Retour au top</a>
+    <!-- TODO: Fermez la section -->
+</section>
+    <footer style="margin-top: 50px; padding: 20px; background-color: #333; color: white;">
+        <h3>Menu de navigation rapide</h3>
+        <!-- TODO: Créez une liste de liens vers toutes les sections de cette page -->
+        <ul>
+            <li> <a href="#introduction"></a> </li>
+            <li> <a href="#chapitre1"></a> </li>
+            <li> <a href="#chapitre2"></a> </li>
+            <li> <a href="#conclusion"></a> </li>
+        </ul>
+        <!-- TODO: Ajoutez un lien vers la page d'accueil -->
+        <a href="sous-dossier/index.html">Aller à l'accueil</a>
+        <!-- TODO: Ajoutez des liens vers d'autres exercices -->
+        <a href="1-structure.html">Exercice 1</a>
+        <a href="balises-base.html">Exercice 2</a>
+        <a href="listes.html">Exercice 3</a>
+    </footer>
+    
+    <div style="margin: 20px 0; padding: 15px; border: 2px solid #28a745;">
+        <h3>Expérimentation avec les fragments d'URL :</h3>
+        <!-- TODO: Expliquez ce qui se passe quand on ajoute #introduction à la fin de l'URL -->
+        <a href="8-navigation.html#introduction">Test</a>
+
+        <!--Ça nous emmène à l'ancre spécifiée
+         TODO: Créez un lien complexe avec un fragment vers une autre page -->
+        <!-- Exemple : vers exercices/attributs.html#contenu-principal -->
+        <a href="6-attributs.html#contenu-principal">Complexe</a>
+        
+    </div>
+</body>
+</html>
+</body>
+</html>

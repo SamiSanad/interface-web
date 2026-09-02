@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice 5 - Liens et navigation</title>
+  </head>
+  <body>
+    <h1>Exercice sur les liens</h1>
+
+    <!-- EXERCICE 5A: Différents types de liens -->
+
+    <h2>Navigation interne</h2>
+    <!-- TODO: Créez un lien vers page1.html avec le texte "Aller à la page 1" -->
+    <a href="page1.html">Aller à la page 1</a>
+    <!-- TODO: Créez un lien vers sous-dossier/page2.html avec le texte "Aller à la page 2" -->
+
+    <!-- TODO: Créez un lien vers la page d'accueil (../../index.html) -->
+    <a href="../../index.html">Aller à la page d'accueil</a>
+
+    <h2>Liens externes</h2>
+    <!-- TODO: Créez un lien vers https://www.mozilla.org/fr/ qui s'ouvre dans un nouvel onglet -->
+    <!-- Utilisez l'attribut approprié pour ouvrir dans un nouvel onglet -->
+    <a
+      href="https://www.mozilla.org/fr/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Visiter Mozilla
+    </a>
+
+    <!-- TODO: Créez un lien vers https://developer.mozilla.org/fr/docs/Web/HTML -->
+    <a href="https://developer.mozilla.org/fr/docs/Web/HTML"></a>
+
+    <h2>Liens spéciaux</h2>
+    <!-- TODO: Créez un lien email vers votre-email@example.com -->
+    <a href="mailto:votreemail@example.com">Lien email</a>
+    <!-- TODO: Créez un lien téléphone vers le numéro 514-123-4567 -->
+    <a href="tel:5141234567">Lien téléphone</a>
+    <h2>Liens avec ancres</h2>
+    <!-- TODO: Créez un lien vers #section-bas qui pointe vers une section plus bas dans cette page -->
+    <a href="#section-bas">Aller à la section du bas</a>
+    <div style="height: 500px">
+      <p>Espace volontaire pour tester le lien ancre...</p>
+    </div>
+
+    <!-- TODO: Ajoutez un titre h3 avec l'id "section-bas" et le texte "Section du bas" -->
+    <h3 id="section-bas">Section du bas</h3>
+    <!-- TODO: Ajoutez un paragraphe sous ce titre -->
+    <p>Voici la section du bas</p>
+    <a href="sous-dossier/page2.html">Aller à la page2.html</a><br />
+    <p><a href="../../index.html">← Retour à la liste des exercices</a></p>
+  </body>
+</html>
