@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salle 1 - La Cabine du Capitaine</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="pirate-header">
+      <h1>🏴‍☠️ Salle 1 - La Cabine du Capitaine 🏴‍☠️</h1>
+    </header>
+
+    <main class="room-container">
+      <!-- INDICE CACHÉ: Cherchez les éléments sémantiques incorrects ! Le capitaine utilisait toujours les bonnes balises pour organiser ses documents. -->
+
+      <section class="room">
+        <h2>Bienvenue dans la cabine du Capitaine</h2>
+        <p>
+          Vous entrez dans la cabine luxueuse du Capitaine Barbe-Noire. Des
+          documents sont éparpillés partout...
+        </p>
+      </section>
+
+      <div class="challenge">
+        <h3>Votre mission :</h3>
+        <p>
+          Le code HTML de cette page contient des erreurs de sémantique.
+          Utilisez les outils de développement pour inspecter le code et
+          corriger les éléments qui ne sont pas sémantiquement corrects !
+        </p>
+
+        <div class="progress-checklist">
+          <h4>Changements à effectuer :</h4>
+          <ul id="checklist-salle1">
+            <li id="check-article">
+              <span class="status-icon">🏴‍☠️</span>
+              Remplacer la <code>&lt;div&gt;</code> du "Journal du Capitaine"
+              par un <code>&lt;article&gt;</code>
+            </li>
+            <li id="check-aside">
+              <span class="status-icon">🏴‍☠️</span>
+              Remplacer la <code>&lt;div&gt;</code> de la "Note importante" par
+              un <code>&lt;aside&gt;</code>
+            </li>
+            <li id="check-nav">
+              <span class="status-icon">🏴‍☠️</span>
+              Remplacer la <code>&lt;div&gt;</code> de la "Navigation du navire"
+              par un <code>&lt;nav&gt;</code>
+            </li>
+            <li id="check-footer">
+              <span class="status-icon">🏴‍☠️</span>
+              Remplacer la <code>&lt;div&gt;</code> des informations du navire
+              par un <code>&lt;footer&gt;</code>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ERREUR 1: Cette div devrait être un article -->
+      <div class="broken-element">
+        <h3>Le journal du Capitaine</h3>
+        <p>
+          Aujourd'hui, nous avons trouvé une île mystérieuse. Le trésor doit s'y
+          trouver...
+        </p>
+        <p><em>Écrit par le Capitaine Barbe-Noire, le 15 mars 1720</em></p>
+      </div>
+
+      <!-- ERREUR 2: Cette div devrait être un aside -->
+      <div class="broken-element">
+        <h4>Note importante</h4>
+        <p>
+          N'oubliez pas : le code secret est dans les commentaires de la salle 3
+          !
+        </p>
+        <!-- FAUSSE PISTE: Ce n'est pas le bon endroit pour chercher le code -->
+      </div>
+
+      <!-- ERREUR 3: Ces divs devraient être dans un nav -->
+      <div class="broken-element">
+        <h4>Navigation du navire</h4>
+        <div>
+          <a href="#pont">Pont principal</a> |
+          <a href="#cale">Cale du navire</a> |
+          <a href="#cuisine">Cuisine</a>
+        </div>
+      </div>
+
+      <!-- ERREUR 4: Cette div devrait être un footer -->
+      <div class="broken-element">
+        <p><small>Cabine du Capitaine - Navire "La Vengeance" - 1720</small></p>
+      </div>
+
+      <div class="hint">
+        Indice : Inspectez le code et remplacez les &lt;div&gt; par les bonnes
+        balises sémantiques HTML5 : &lt;article&gt;, &lt;aside&gt;, &lt;nav&gt;,
+        &lt;footer&gt;
+      </div>
+
+      <div id="error-message" class="error-message">
+        ❌ Il reste encore des erreurs à corriger ! Continuez à chercher...
+      </div>
+
+      <div id="success-message" class="success-message">
+        ✅ Excellent travail, moussaillon ! Vous pouvez maintenant accéder à la
+        salle suivante !
+      </div>
+
+      <div style="text-align: center; margin: 2rem 0">
+        <a href="salle2.html" id="next-room" class="next-room-btn disabled-link"
+          >Aller à la Salle 2 - Le Pont 🚢</a
+        >
+      </div>
+    </main>
+
+    <!-- FAUSSE PISTE DANS LES COMMENTAIRES -->
+    <!-- Le trésor n'est pas ici, continuez à chercher ! -->
+    <!-- Mot de passe : FAUSSE-PISTE-123 -->
+
+    <footer>
+      <p><a href="index.html">Retour à l'accueil</a></p>
+    </footer>
+
+    <script src="validation-salle1.js"></script>
+  </body>
+</html>

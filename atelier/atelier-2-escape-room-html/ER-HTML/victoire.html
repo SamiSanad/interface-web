@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🏆 VICTOIRE - Trésor Trouvé !</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        background: linear-gradient(45deg, #ffd700, #ffa500, #ff6347, #ffd700);
+        background-size: 400% 400%;
+        animation: treasure-bg 3s ease infinite;
+      }
+
+      @keyframes treasure-bg {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .victory-container {
+        text-align: center;
+        animation: victory-bounce 2s ease-in-out infinite;
+      }
+
+      @keyframes victory-bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .treasure-emoji {
+        font-size: 5rem;
+        animation: treasure-spin 2s linear infinite;
+      }
+
+      @keyframes treasure-spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="pirate-header">
+      <h1>🏆 FÉLICITATIONS ! TRÉSOR TROUVÉ ! 🏆</h1>
+    </header>
+
+    <main class="room-container victory-container">
+      <div class="treasure-chest">
+        <div class="treasure-emoji">💎</div>
+        <h2>🎉 VICTOIRE ! 🎉</h2>
+        <p style="font-size: 1.5rem; margin: 1rem 0">
+          Vous avez brillamment résolu tous les défis de l'escape room HTML !
+        </p>
+      </div>
+
+      <section class="victory-details">
+        <h3>🏴‍☠️ Récapitulatif de votre aventure :</h3>
+
+        <div style="text-align: left; max-width: 600px; margin: 2rem auto">
+          <h4>✅ Salle 1 - Cabine du Capitaine :</h4>
+          <ul>
+            <li>Correction des éléments sémantiques HTML5</li>
+            <li>
+              Remplacement des &lt;div&gt; par &lt;article&gt;, &lt;aside&gt;,
+              &lt;nav&gt;, &lt;footer&gt;
+            </li>
+          </ul>
+
+          <h4>✅ Salle 2 - Pont du Navire :</h4>
+          <ul>
+            <li>Correction des formulaires HTML</li>
+            <li>Association des labels aux inputs</li>
+            <li>Validation des champs (type email, min/max pour l'âge)</li>
+            <li>Groupement des boutons radio</li>
+            <li>Attributs d'action et méthode du formulaire</li>
+          </ul>
+
+          <h4>✅ Salle 3 - Cale au Trésor :</h4>
+          <ul>
+            <li>Recherche d'informations dans les commentaires HTML</li>
+            <li>Utilisation du type d'input "tel" pour les numéros</li>
+            <li>Saisie du code secret : 123-456-7890</li>
+            <li>Configuration d'un champ en lecture seule</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="skills-learned">
+        <h3>🎓 Compétences HTML maîtrisées :</h3>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+          "
+        >
+          <div
+            class="skill-card"
+            style="
+              background: rgba(255, 255, 255, 0.2);
+              padding: 1rem;
+              border-radius: 10px;
+            "
+          >
+            <h4>🏗️ Sémantique HTML5</h4>
+            <p>Utilisation correcte des balises sémantiques</p>
+          </div>
+          <div
+            class="skill-card"
+            style="
+              background: rgba(255, 255, 255, 0.2);
+              padding: 1rem;
+              border-radius: 10px;
+            "
+          >
+            <h4>📝 Formulaires</h4>
+            <p>Validation et accessibilité des formulaires</p>
+          </div>
+          <div
+            class="skill-card"
+            style="
+              background: rgba(255, 255, 255, 0.2);
+              padding: 1rem;
+              border-radius: 10px;
+            "
+          >
+            <h4>Outils de développement</h4>
+            <p>Inspection et modification du code HTML</p>
+          </div>
+          <div
+            class="skill-card"
+            style="
+              background: rgba(255, 255, 255, 0.2);
+              padding: 1rem;
+              border-radius: 10px;
+            "
+          >
+            <h4>Types d'input</h4>
+            <p>Choix approprié des types de champs</p>
+          </div>
+        </div>
+      </section>
+
+      <div style="margin: 3rem 0">
+        <h3>🎊 Vous êtes maintenant un vrai pirate du code HTML ! 🎊</h3>
+        <p style="font-size: 1.2rem; font-style: italic">
+          "Un bon pirate connaît ses balises comme ses cordes !"
+          <br />- Capitaine Barbe-Noire
+        </p>
+      </div>
+
+      <div style="margin: 2rem 0">
+        <a href="index.html" class="treasure-btn">Retour au port (Accueil)</a>
+      </div>
+    </main>
+
+    <footer style="background: rgba(0, 0, 0, 0.8); color: gold">
+      <p>🏆 Escape Room HTML terminée avec succès ! 🏆</p>
+      <p style="margin-top: 1rem">
+        <strong>Temps de développement :</strong> Réalisé pour l'apprentissage
+        du HTML<br />
+        <strong>Niveau :</strong> Débutant à Intermédiaire<br />
+        <strong>Technologies utilisées :</strong> HTML5, CSS3, JavaScript
+        (validation uniquement)
+      </p>
+    </footer>
+
+    <script>
+      // Effet de célébration
+      console.log(
+        '%c🎉 FÉLICITATIONS ! 🎉',
+        'font-size: 2rem; color: gold; background: darkgreen; padding: 10px;',
+      );
+      console.log("Vous avez terminé l'Escape Room HTML avec succès !");
+
+      // Confettis dans la console (pour le fun !)
+      setTimeout(() => {
+        console.log(
+          '%c🎊 TRÉSOR TROUVÉ ! 🎊',
+          'font-size: 1.5rem; color: orange;',
+        );
+      }, 1000);
+
+      setTimeout(() => {
+        console.log(
+          '%c⚡ MAÎTRE DU HTML ! ⚡',
+          'font-size: 1.2rem; color: yellow;',
+        );
+      }, 2000);
+    </script>
+  </body>
+</html>

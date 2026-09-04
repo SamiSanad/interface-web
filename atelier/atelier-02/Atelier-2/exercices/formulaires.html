@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Exercices sur les formulaires</title>
+    </head>
+    <body>
+        <h1>Exercices sur les formulaires HTML</h1>
+
+        <!-- Exercice 11: Formulaire d'inscription avec méthode POST -->
+        <section>
+            <h2>Formulaire d'inscription</h2>
+            <!-- À COMPLÉTER: Créer le formulaire d'inscription -->
+            <form action="../resultats/inscription.html" method="post">
+                <label for="nom-complet">Nom complet:</label>
+                <input id="nom-complet" placeholder="Votre nom" name="nom" type="text" required />
+
+                <label for="courriel">Email:</label>
+                <input id="courriel" name="email" type="email" />
+
+                <label for="motDePasse">Mot de passe</label>
+                <input id="motDePasse" name="password" type="password" minlength="8" required />
+
+                <button type="submit">S'inscrire</button>
+            </form>
+        </section>
+
+        <!-- Exercice 12: Formulaire de contact avec méthode GET -->
+        <section>
+            <h2>Formulaire de contact</h2>
+            <!-- À COMPLÉTER: Créer le formulaire de contact -->
+            <form action="../resultats/contact.html " method="get">
+                <label for="subject">Sujet:</label>
+                <input id="subject" name="sujet" type="text" required />
+
+                <label for="message">Ajouter un message</label>
+                <textarea
+                    name="message"
+                    id="zoneMessage"
+                    rows="4"
+                    cols="50"
+                    placeholder="Votre message"
+                ></textarea>
+
+                <label for="pri">Choisir votre priorité:</label>
+                <select id="pri" name="priorite">
+                    <option value="Ba">Basse</option>
+                    <option value="Moy">Moyenne</option>
+                    <option value="Él">Élevée</option>
+                </select>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+        <!-- Exercice 13: Formulaire avec validation -->
+        <section>
+            <h2>Formulaire de commande</h2>
+            <!-- À COMPLÉTER: Créer le formulaire avec validation -->
+            <form action="formulaires.html" method="post">
+                <label for="qte">Quantité</label>
+                <input id="qte" type="number" name="quantite" min="1" max="10" value="1" />
+
+                <label for="dat"> Date:</label>
+                <input id="dat" type="date" name="livraison" required />
+
+                <label for="tel">Numéro de téléphone:</label>
+                <input
+                    id="tel"
+                    type="number"
+                    name="telephone"
+                    minlength="10"
+                    maxlength="10"
+                    required
+                />
+
+                <input type="checkbox" id="cond" name="conditions" value="Conditions" required />
+                <label for="cond">J'accepte les conditions</label>
+
+                <h2>Mode de paiement</h2>
+                <input type="radio" id="pay-carte" name="paiement" value="carte" />
+                <label for="pay-carte">carte</label>
+
+                <input type="radio" id="pay-pal" name="paiement" value="paypal" />
+                <label for="pay-pal">paypal</label>
+
+                <input type="radio" id="pay-vir" name="paiement" value="virement" />
+                <label for="pay-vir">virement</label>
+                <button type="reset">Effacer</button>
+                <button type="submit">Commander</button>
+            </form>
+        </section>
+
+        <!-- Navigation -->
+        <nav>
+            <!-- À COMPLÉTER: Liens de navigation relatifs -->
+            <ul>
+                <li><a href="listes.html"></a></li>
+                <li><a href="multimedia.html"></a></li>
+                <li><a href="tableaux.html"></a></li>
+            </ul>
+        </nav>
+    </body>
+</html>

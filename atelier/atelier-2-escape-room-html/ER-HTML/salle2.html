@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salle 2 - Le Pont du Navire</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="pirate-header">
+      <h1>⚓ Salle 2 - Le Pont du Navire ⚓</h1>
+    </header>
+
+    <main class="room-container">
+      <!-- INDICE IMPORTANT: Le capitaine était très méticuleux avec ses formulaires de recrutement ! -->
+
+      <section class="room">
+        <h2>Le Pont Principal</h2>
+        <p>
+          Vous voici sur le pont du navire. Le vent souffle et vous entendez les
+          vagues... Un vieux formulaire de recrutement traîne sur une caisse.
+        </p>
+      </section>
+
+      <div class="challenge">
+        <h3>Votre mission :</h3>
+        <p>
+          Ce formulaire de recrutement de pirates contient des erreurs !
+          Corrigez les problèmes de validation HTML et assurez-vous que le
+          formulaire redirige correctement vers la salle suivante.
+        </p>
+
+        <div class="progress-checklist">
+          <h4>Changements à effectuer :</h4>
+          <ul id="checklist-salle2">
+            <li id="check-form-action">
+              <span class="status-icon">🏴‍☠️</span>
+              Ajouter <code>action="salle3.html"</code> et
+              <code>method="GET"</code> au formulaire
+            </li>
+            <li id="check-labels">
+              <span class="status-icon">🏴‍☠️</span>
+              Associer les labels aux inputs avec l'attribut <code>for</code>
+            </li>
+            <li id="check-age-validation">
+              <span class="status-icon">🏴‍☠️</span>
+              Ajouter <code>min="16"</code> et <code>max="65"</code> au champ
+              âge
+            </li>
+            <li id="check-email-type">
+              <span class="status-icon">🏴‍☠️</span>
+              Changer le type du champ email de <code>text</code> à
+              <code>email</code>
+            </li>
+            <li id="check-select-values">
+              <span class="status-icon">🏴‍☠️</span>
+              Ajouter des attributs <code>value</code> aux options du select
+            </li>
+            <li id="check-radio-group">
+              <span class="status-icon">🏴‍☠️</span>
+              Donner le même <code>name="specialty"</code> aux 3 boutons radio
+            </li>
+            <li id="check-textarea">
+              <span class="status-icon">🏴‍☠️</span>
+              Ajouter <code>required</code> et <code>minlength="20"</code> au
+              textarea
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <article>
+        <h3>📜 Formulaire de Recrutement de l'Équipage</h3>
+        <div class="form-container">
+          <!-- ERREUR 1: Le formulaire n'a pas d'action ni de method -->
+          <form id="recruitment-form">
+            <!-- ERREUR 2: Les labels ne sont pas associés aux inputs -->
+            <label>Nom du pirate :</label>
+            <input type="text" id="pirate-name" required />
+
+            <label>Âge :</label>
+            <!-- ERREUR 3: Pas de validation min/max pour l'âge -->
+            <input type="number" id="age" required />
+
+            <label>Adresse e-mail :</label>
+            <!-- ERREUR 4: Type incorrect pour l'email -->
+            <input type="text" id="email" required />
+
+            <label>Expérience en mer :</label>
+            <!-- ERREUR 5: Les options n'ont pas de value -->
+            <select id="experience" required>
+              <option>Choisir votre niveau</option>
+              <option>Débutant (0-2 ans)</option>
+              <option>Expérimenté (3-10 ans)</option>
+              <option>Vétéran (10+ ans)</option>
+            </select>
+
+            <label>Spécialité :</label>
+            <!-- ERREUR 6: Les inputs radio n'ont pas le même name -->
+            <div>
+              <input
+                type="radio"
+                id="navigation"
+                name="specialty1"
+                value="navigation"
+                required
+              />
+              <label for="navigation">Navigation</label><br />
+
+              <input
+                type="radio"
+                id="combat"
+                name="specialty2"
+                value="combat"
+                required
+              />
+              <label for="combat">Combat</label><br />
+
+              <input
+                type="radio"
+                id="cuisine"
+                name="specialty3"
+                value="cuisine"
+                required
+              />
+              <label for="cuisine">Cuisine</label>
+            </div>
+
+            <label>Pourquoi voulez-vous rejoindre l'équipage ?</label>
+            <!-- ERREUR 7: Textarea sans attributs de validation -->
+            <textarea id="motivation"></textarea>
+
+            <button type="submit">Rejoindre l'équipage ! 🏴‍☠️</button>
+          </form>
+        </div>
+      </article>
+
+      <aside>
+        <h4>Règles de recrutement</h4>
+        <ul>
+          <li>Minimum 16 ans pour naviguer</li>
+          <li>Maximum 65 ans (retraite de pirate)</li>
+          <li>Email valide requis pour les communications</li>
+          <li>Motivation d'au moins 20 caractères</li>
+        </ul>
+      </aside>
+
+      <div class="hint">
+        Indice : Vérifiez les attributs des inputs, les associations
+        label-input, la validation des champs et l'action du formulaire !
+      </div>
+
+      <!-- FAUSSE PISTE -->
+      <!-- CODE SECRET : TRÉSOR-PIRATE-456 (ce n'est pas le bon code !) -->
+
+      <div id="error-message" class="error-message">
+        ❌ Le formulaire n'est pas encore correct ! Vérifiez tous les champs...
+      </div>
+
+      <div id="success-message" class="success-message">
+        ✅ Parfait ! Le formulaire est maintenant correct. En avant vers la
+        prochaine salle !
+      </div>
+
+      <div style="text-align: center; margin: 2rem 0">
+        <a href="salle3.html" id="next-room" class="next-room-btn disabled-link"
+          >Aller à la Salle 3 - La Cale ⚱️</a
+        >
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        <a href="index.html">Retour à l'accueil</a> |
+        <a href="salle1.html">⬅️ Salle précédente</a>
+      </p>
+    </footer>
+
+    <script src="validation-salle2.js"></script>
+  </body>
+</html>

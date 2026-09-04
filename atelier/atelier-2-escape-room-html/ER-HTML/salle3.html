@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salle 3 - La Cale au Trésor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="pirate-header">
+      <h1>💰 Salle 3 - La Cale au Trésor 💰</h1>
+    </header>
+
+    <main class="room-container">
+      <!-- DÉBUT DE LA ZONE DE RECHERCHE - Le code secret se trouve dans un long commentaire quelque part dans cette page -->
+      <!-- Ne cherchez pas ici, c'est une fausse piste, le code n'est pas dans ce commentaire -->
+      <!-- Continuez à chercher plus loin dans le code source -->
+
+      <section class="room">
+        <h2>La Cale Mystérieuse</h2>
+        <p>
+          Vous descendez dans la cale du navire. L'air est humide et vous
+          entendez des gouttes d'eau... Des coffres sont empilés partout !
+        </p>
+      </section>
+
+      <div class="challenge">
+        <h3>Votre dernière mission :</h3>
+        <p>Pour ouvrir le coffre au trésor, vous devez :</p>
+        <ol>
+          <li>
+            Trouver le <strong>code secret</strong> caché dans les commentaires
+            HTML
+          </li>
+          <li>
+            Corriger le type du champ de saisie pour qu'il accepte le bon format
+          </li>
+          <li>Entrer le code dans le champ approprié</li>
+        </ol>
+      </div>
+
+      <!-- FAUSSE PISTE: Voici un autre commentaire sans intérêt -->
+      <!-- Le trésor n'est pas ici non plus -->
+
+      <article>
+        <h3>🗝️ Serrure du Coffre au Trésor</h3>
+        <div class="form-container">
+          <form action="victoire.html" method="POST" id="treasure-form">
+            <label for="captain-name">Nom du capitaine :</label>
+            <!-- ERREUR: Ce champ devrait être en lecture seule avec la bonne valeur -->
+            <input
+              type="text"
+              id="captain-name"
+              value="Capitaine Barbe-Noire"
+            />
+
+            <!-- LONG COMMENTAIRE AVEC LE CODE SECRET -->
+            <!-- 
+                        Cher journal,
+                        
+                        Aujourd'hui nous avons enterré le trésor sur l'île maudite.
+                        J'ai créé un code secret pour protéger notre butin.
+                        
+                        Le code est composé de chiffres et doit être saisi dans un format spécial.
+                        Voici les informations importantes :
+                        
+                        - Le code secret est : 123-456-7890
+                        - Il s'agit d'un numéro de contact d'urgence pour l'équipage
+                        - Le format requis est XXX-XXX-XXXX (comme un numéro de téléphone)
+                        - N'oubliez pas de configurer le champ input avec le bon type !
+                        
+                        Que ce secret reste bien gardé !
+                        
+                        Signé : Capitaine Barbe-Noire
+                        Date : 15 mars 1720
+                    -->
+
+            <label for="secret-code">Code secret de la serrure :</label>
+            <!-- ERREUR: Le type est incorrect pour un numéro de téléphone -->
+            <input
+              type="text"
+              id="secret-code"
+              placeholder="Format: XXX-XXX-XXXX"
+              required
+            />
+
+            <label for="treasure-type">Type de trésor recherché :</label>
+            <select id="treasure-type" required>
+              <option value="">Sélectionnez le trésor</option>
+              <option value="gold">Pièces d'or</option>
+              <option value="jewels">Bijoux précieux</option>
+              <option value="map">Carte au trésor</option>
+            </select>
+
+            <!-- AUTRE FAUSSE PISTE DANS UN COMMENTAIRE -->
+            <!-- Code bidon : 999-888-7777 (ne fonctionne pas !) -->
+
+            <button type="submit">Ouvrir le coffre ! 🗝️</button>
+          </form>
+        </div>
+      </article>
+
+      <aside>
+        <h4>Indices pour la recherche</h4>
+        <ul>
+          <li>Le code secret est au format téléphone américain</li>
+          <li>Regardez attentivement dans les commentaires HTML</li>
+          <li>Le champ input doit avoir le type approprié pour un numéro</li>
+          <li>Méfiez-vous des fausses pistes !</li>
+        </ul>
+      </aside>
+
+      <div class="hint">
+        Astuce : Utilisez Ctrl+F (ou Cmd+F) dans les outils de développement
+        pour chercher "code secret" dans les commentaires !
+      </div>
+
+      <!-- Encore une fausse piste -->
+      <!-- Code incorrect : PIRATE-123 -->
+
+      <div id="error-message" class="error-message">
+        ❌ Quelque chose ne va pas... Vérifiez le type du champ et le code saisi
+        !
+      </div>
+
+      <div id="success-message" class="success-message">
+        ✅ Excellent ! Le coffre s'ouvre... Le trésor vous attend !
+      </div>
+
+      <div style="text-align: center; margin: 2rem 0">
+        <a
+          href="victoire.html"
+          id="final-room"
+          class="next-room-btn disabled-link"
+          >Récupérer le Trésor ! 🏆</a
+        >
+      </div>
+    </main>
+
+    <!-- Dernière fausse piste avant la fin -->
+    <!-- Le code n'est pas : 000-111-2222 -->
+
+    <footer>
+      <p>
+        <a href="index.html">Retour à l'accueil</a> |
+        <a href="salle2.html">⬅️ Salle précédente</a>
+      </p>
+    </footer>
+
+    <script src="validation-salle3.js"></script>
+  </body>
+</html>
