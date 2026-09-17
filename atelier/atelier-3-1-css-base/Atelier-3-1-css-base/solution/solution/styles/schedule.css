@@ -1,0 +1,180 @@
+/* Solution - Styles pour la page du calendrier */
+
+.schedule-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.schedule-container h2 {
+    text-align: center;
+    color: #013369;
+    margin-bottom: 32px;
+}
+
+/* Layout des matchs corrigé */
+.games-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.game-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    flex: 1 1 300px;
+    transition: transform 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.game-date {
+    background: #013369;
+    color: white;
+    padding: 16px 24px;
+    font-weight: bold;
+    min-width: 150px;
+    white-space: nowrap;
+}
+
+.game-matchup {
+    flex: 1;
+    text-align: center;
+    padding: 16px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.team-home {
+    color: #013369;
+}
+
+.vs {
+    margin: 0 12px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.team-away {
+    color: #d50a0a;
+}
+
+.game-time {
+    padding: 16px;
+    color: #666;
+    min-width: 100px;
+    text-align: center;
+}
+
+.game-status {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    min-width: 80px;
+    text-align: center;
+    margin: 0 16px;
+}
+
+.game-status.completed {
+    background: #28a745;
+    color: white;
+}
+
+.game-status.upcoming {
+    background: #ffc107;
+    color: #333;
+}
+
+.final-score, .prediction {
+    padding: 16px 24px;
+    font-weight: bold;
+    min-width: 100px;
+    text-align: center;
+}
+
+.final-score {
+    background: #e9ecef;
+    color: #013369;
+}
+
+.prediction {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* Bracket des playoffs corrigé */
+.playoff-bracket {
+    background: white;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.playoff-bracket h3 {
+    margin-top: 0;
+    text-align: center;
+    color: #013369;
+}
+
+.bracket-round {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bracket-game {
+    border: 2px solid #013369;
+    border-radius: 8px;
+    background: white;
+    overflow: hidden;
+    min-width: 200px;
+}
+
+.bracket-team {
+    padding: 16px 24px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.bracket-team:hover {
+    background: #e3f2fd;
+}
+
+.bracket-team:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .game-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .game-matchup {
+        order: -1;
+        padding: 24px 16px;
+    }
+    
+    .game-date, .game-time, .final-score, .prediction {
+        min-width: auto;
+    }
+    
+    .bracket-round {
+        flex-direction: column;
+        gap: 16px;
+    }
+}

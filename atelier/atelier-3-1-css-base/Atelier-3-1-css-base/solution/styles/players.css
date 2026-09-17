@@ -1,0 +1,175 @@
+/* Styles pour la page des joueurs - AVEC PROBLÈMES À CORRIGER */
+
+.players-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.players-container h2 {
+  text-align: center;
+  color: #013369;
+  margin-bottom: 30px;
+}
+
+/* Menu dropdown mal configuré - À CORRIGER */
+.position-menu {
+  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.dropdown-menu {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-trigger {
+  display: block;
+  padding: 10px 15px;
+  background: #013369;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-width: 200px;
+  z-index: 1000;
+  display: block;
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content li {
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 12px;
+  color: #333;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  background-color: #f8f9fa;
+}
+
+/* Grille des joueurs */
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.player-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.player-card h3 {
+  margin-top: 0;
+  color: #013369;
+  border-bottom: 2px solid #d50a0a;
+  padding-bottom: 10px;
+}
+
+/* Liste des stats mal stylée - À CORRIGER */
+.player-stats {
+  margin: 15px 0;
+  list-style: none;
+  padding: 0;
+}
+
+.player-stats li {
+  margin: 5px 0;
+  padding: 3px 0 3px 20px;
+  position: relative;
+}
+.player-stats li::before {
+  content: '▶ ';
+  position: absolute;
+  left: 0;
+  color: #013369;
+}
+
+.player-rating {
+  background: #28a745;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* Section des récompenses */
+.achievements-section {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.achievements-section h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.awards-list li {
+  padding: 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.mvp-award {
+  background: gold;
+  color: black;
+}
+
+.rookie-award {
+  background: silver;
+  color: black;
+}
+
+.defensive-award {
+  background: #8b4513;
+  color: white;
+}
+
+.coach-award {
+  background: #4169e1;
+  color: white;
+}

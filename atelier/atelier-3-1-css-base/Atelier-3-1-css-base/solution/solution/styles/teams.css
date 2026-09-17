@@ -1,0 +1,113 @@
+/* Solution - Styles pour la page des équipes */
+
+.teams-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.teams-container h2 {
+    text-align: center;
+    color: #013369;
+    margin-bottom: 32px;
+}
+
+/* Table correctement stylée */
+.teams-table {
+    width: 100%;
+    margin-bottom: 48px;
+    border-collapse: collapse;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.teams-table th {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 16px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.teams-table th:first-child,
+.teams-table td:first-child {
+    text-align: center;
+}
+
+.teams-table th:nth-child(2),
+.teams-table td:nth-child(2) {
+    text-align: left;
+}
+
+.teams-table td {
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.teams-table tr:nth-child(even) {
+    background-color: var(--color-light);
+}
+
+.teams-table tbody tr:hover {
+    background-color: #e3f2fd;
+}
+
+/* Cards d'équipes */
+.team-cards {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-card {
+    background: var(--color-white);
+    padding: 24px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-width: 250px;
+    transition: transform 0.3s;
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+}
+
+.team-card:focus {
+    outline: none;
+    border: 3px solid #007bff;
+}
+
+.team-card[data-conference="afc"] {
+    border-left: 4px solid var(--color-primary);
+}
+
+.team-card h3 {
+    margin-top: 0;
+    color: var(--color-secondary);
+}
+
+.team-card p {
+    margin: 8px 0;
+    color: var(--color-text-light);
+}
+
+.win-streak {
+    background: var(--color-success);
+    color: var(--color-white);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.lose-streak {
+    background: #dc3545;
+    color: var(--color-white);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}

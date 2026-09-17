@@ -1,0 +1,113 @@
+/* Styles pour la page des équipes - AVEC PROBLÈMES À CORRIGER */
+
+.teams-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teams-container h2 {
+  text-align: center;
+  color: #013369;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+}
+
+/* Table mal stylée - À CORRIGER */
+.teams-table {
+  width: 100%;
+  margin-bottom: 40px;
+  width: 100%;
+  margin-bottom: 40px;
+  border: 2px solid var(--color-primary);
+  border-collapse: collapse;
+}
+
+.teams-table th {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 16px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+
+.teams-table td {
+  padding: 8px;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+
+.teams-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.teams-table tr {
+  background-color: white;
+}
+.teams-table tbody tr:hover {
+  background-color: #e3f2fd;
+}
+.teams-table td:nth-child(2) {
+  text-align: left;
+}
+
+/* Cards d'équipes */
+.team-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
+  transition: transform 0.3s;
+}
+
+.team-card[data-conference='afc'] {
+  border-left: 4px solid #013369;
+}
+.team-card:hover {
+  transform: scale(1.05);
+}
+
+.team-card h3 {
+  margin-top: 0;
+  color: #d50a0a;
+}
+
+.team-card p {
+  margin: 5px 0;
+  color: #666;
+}
+.team-card:focus {
+  outline: none;
+  border: 3px solid #007bff;
+}
+
+.win-streak {
+  background: green;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.lose-streak {
+  background: red;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+.teams-container h2 {
+  text-align: center;
+  color: #690158;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+}

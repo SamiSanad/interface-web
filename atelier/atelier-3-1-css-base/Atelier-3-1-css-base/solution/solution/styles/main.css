@@ -1,0 +1,183 @@
+/* Solution - Fichier CSS externe avec styles de base */
+
+:root {
+  --color-primary: #013369;
+  --color-secondary: #d50a0a;
+  --color-success: #28a745;
+  --color-warning: #ffc107;
+  --color-light: #f8f9fa;
+  --color-white: #ffffff;
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --border-radius: 8px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #f0f0f0;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 2.2em;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.header {
+  background-color: var(--color-primary);
+  padding: var(--spacing-lg);
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.nav ul {
+  background-color: var(--color-secondary);
+  padding: var(--spacing-md) 0;
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav li {
+  margin: 0 var(--spacing-md);
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  transition: all 0.3s;
+}
+
+.nav a:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.hero {
+  padding: 50px var(--spacing-lg);
+  text-align: center;
+  background: white;
+}
+
+.stats-grid {
+  display: flex;
+  gap: var(--spacing-lg);
+  justify-content: center;
+  margin-top: 48px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: var(--color-light);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-card h3 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.stat-card p {
+  margin: 8px 0 0 0;
+  color: var(--color-text-light);
+}
+
+/* Solution Exercice 0: Section Hero avec Image de Fond */
+.hero-section {
+  background-image: url('/img/football.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hero-content {
+  background: rgba(1, 51, 105, 0.9);
+  color: var(--color-white);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.hero-content h3 {
+  font-size: 2.5em;
+  margin: 0 0 16px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin: 0 0 24px 0;
+  opacity: 0.9;
+}
+
+.cta-button {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cta-button:hover {
+  background: #b8090a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 300px;
+    margin: 20px 10px;
+  }
+  .hero-content {
+    padding: 24px;
+  }
+  .hero-content h3 {
+    font-size: 1.8em;
+  }
+}
