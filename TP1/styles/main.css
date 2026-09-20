@@ -1,0 +1,18 @@
+header {
+    background: linear-gradient(
+        135deg,
+        #002768,
+        #39b54a
+    ); /*Demander pour les variables intérieures*/
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+}
+
+header li {
+    display: inline;
+}
+
+.titreHeader {
+    display: inline;
+}

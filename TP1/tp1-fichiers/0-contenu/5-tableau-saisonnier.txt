@@ -1,0 +1,11 @@
+Produits de saison au Québec
+
+Disponibilité par mois (extraits)
+
+Mois | Produit | Disponibilité
+Mai | Asperge | Haute
+Juin | Fraise | Haute
+Juillet | Bleuet | Haute
+Août | Maïs | Haute
+Septembre | Pomme | Haute
+Octobre | Citrouille | Moyenne

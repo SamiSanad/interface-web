@@ -1,0 +1,20 @@
+Bienvenue sur Cuisine MOMO
+
+---------section -bloc-hero
+Cuisine MOMO est un projet du Cégep Montmorency pour découvrir la cuisine au quotidien : 
+des recettes accessibles, des techniques de base expliquées simplement, et un coup d’oeil 
+sur les produits de saison au Québec. 
+Bon appétit!
+
+---------section cartes avec liens vers les autres pages
+Recettes vedettes
+Des classiques d’ici et d’ailleurs, testés par nos étudiant(e)s.
+Découvrir
+
+Techniques
+Couper, saisir, rôtir : maîtrisez l’essentiel sans équipement compliqué.
+Apprendre
+
+Saisonnier
+Quoi cuisiner selon le mois? Misez sur la fraîcheur locale.
+Consulter
