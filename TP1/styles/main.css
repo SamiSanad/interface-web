@@ -1,18 +1,51 @@
 header {
     background: linear-gradient(
         135deg,
-        #002768,
-        #39b54a
+        var(--primary-color),
+        #0077ff
     ); /*Demander pour les variables intérieures*/
     position: sticky;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
     justify-content: space-between;
+    gap: 30px;
+    
+    
 }
 
 header li {
-    display: inline;
+    list-style: none;
+}
+
+header a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--background-color) ;
+
+}
+
+header h1 {
+    color: var(--background-color) ;
+}
+
+header h2 {
+    font-size: 16px ;
+    color: var(--background-color) ;
+    font-weight: normal;
 }
 
 .titreHeader {
     display: inline;
 }
+
+#pageCourante {
+    text-decoration: underline;
+    opacity: 0.85;
+}
+
+footer
