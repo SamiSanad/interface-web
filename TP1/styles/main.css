@@ -1,21 +1,26 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    height: 100vh;
+    margin: 0;
+}
+
 header {
-    background: linear-gradient(
-        135deg,
-        var(--primary-color),
-        #0077ff
-    ); /*Demander pour les variables intérieures*/
     position: sticky;
+    top: 0;
+    background: linear-gradient(135deg, var(--primary-color), #0077ff);
+    height: 125px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-
+/* Demander pour espace occupé*/
 header ul {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    
-    
 }
 
 header li {
@@ -25,17 +30,16 @@ header li {
 header a {
     list-style: none;
     text-decoration: none;
-    color: var(--background-color) ;
-
+    color: var(--background-color);
 }
 
 header h1 {
-    color: var(--background-color) ;
+    color: var(--background-color);
 }
 
 header h2 {
-    font-size: 16px ;
-    color: var(--background-color) ;
+    font-size: 16px;
+    color: var(--background-color);
     font-weight: normal;
 }
 
@@ -48,4 +52,58 @@ header h2 {
     opacity: 0.85;
 }
 
-footer
+footer {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    background-color: var(--footer-bg);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 180px;
+}
+
+footer p {
+    grid-column: 2 / 3;
+    text-align: center;
+    
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 12px 24px;
+}
+
+button :hover {
+    transition: all 0.3s ease;
+    background-color: greenyellow;
+}
+
+.badgeInfo {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 0.3rem 0.8rem;
+    font-size: small;
+    font-weight: bold;
+}
+
+.facile {
+    background-color: rgba(57, 181, 74, 0.2);
+    color: var(--secondary-color);
+}
+
+.moyen {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #856404;
+}
+
+.difficile {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #721c24;
+}
+
+main{
+    flex: 1;
+}
