@@ -1,0 +1,51 @@
+main {
+    display: grid;
+}
+
+.carte {
+    background-color: var(--background-color); /*Faire attention au premier*/
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--primary-color);
+}
+
+h3 {
+    font-weight: 600;
+}
+
+#securite {
+    background-color: lightgreen;
+    color: var(--secondary-color);
+    border-left-color: var(--secondary-color);
+}
+
+@media (min-width: 1024px) {
+    main {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        grid-template-rows: 1fr 1fr;
+    }
+
+    main #securite {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+    main #securite {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}

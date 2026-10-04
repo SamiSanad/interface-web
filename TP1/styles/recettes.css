@@ -1,0 +1,91 @@
+.carte {
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carte h2,
+.carte .badgeInfo,
+.carte button,
+.carte p {
+    margin: 10px;
+}
+.carte:hover {
+    box-shadow: 2px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.carte img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 16px;
+}
+
+@media (max-width: 480px) {
+    .carte {
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .carte {
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #sectionCartes {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #sectionCartes {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Demander c quoi adaptation automatique!!!!!!!!!!!!*/
+        gap: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .carte {
+        min-width: 350px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #sectionCartes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .carte {
+        min-width: 350px;
+    }
+}
+
+.ligne {
+    display: flex;
+}
+
+#sectionTitre {
+    background-color: lightgray;
+    text-align: center;
+}
+
+h1 {
+    color: var(--primary-color);
+}
