@@ -56,6 +56,10 @@
         padding-bottom: 30px;
     }
 
+    #headerUn {
+        flex-direction: column;
+        text-align: center;
+    }
     .carte {
         min-width: 350px;
     }
@@ -87,5 +91,9 @@
 }
 
 h1 {
+    color: var(--primary-color);
+}
+
+footer h3 {
     color: var(--primary-color);
 }

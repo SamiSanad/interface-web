@@ -23,7 +23,8 @@ body {
     gap: 30px;
 }
 
-#headerUn li {
+#headerUn li,
+footer li {
     list-style: none;
 }
 #headerUn a {
@@ -65,17 +66,35 @@ footer p {
     grid-column: 2 / 3;
     text-align: center;
 }
+footer a {
+    text-decoration: none;
+    color: var(--text-color);
+}
 
-button {
+footer a span {
+    color: var(--primary-color);
+}
+footer section {
+    display: flex;
+    flex-direction: column;
+}
+
+.bouton {
+    text-decoration: none;
+}
+.bouton-contenu {
     background-color: var(--secondary-color);
     color: var(--background-color);
     font-weight: bold;
     border-radius: 30px;
     padding: 12px 24px;
     border-style: none;
+    max-width: fit-content;
+    text-align: center;
+    margin: 5px;
 }
 
-button :hover {
+.bouton :hover {
     transition: all 0.3s ease;
     background-color: greenyellow;
 }
@@ -117,4 +136,60 @@ button :hover {
 
 main {
     flex: 1;
+}
+
+@media (max-width: 768px) {
+    #headerUn {
+        flex-direction: column;
+        text-align: center; /*Demander comment aligner peut faire un div avec largeur fixe aligner gauche*/
+    }
+    .titreHeader {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: medium;
+    }
+    h2 {
+        font-size: small;
+    }
+    h3 {
+        font-size: smaller;
+    }
+
+    h4 {
+        font-size: x-small;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        font-size: large;
+    }
+    h2 {
+        font-size: medium;
+    }
+    h3 {
+        font-size: small;
+    }
+
+    h4 {
+        font-size: smaller;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: x-large;
+    }
+    h2 {
+        font-size: large;
+    }
+    h3 {
+        font-size: medium;
+    }
+
+    h4 {
+        font-size: small;
+    }
 }

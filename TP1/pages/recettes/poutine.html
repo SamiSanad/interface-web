@@ -11,9 +11,9 @@
 
     <header id="headerUn">
         <section class="titreHeader">
-            <h1>Cuisine MOMO</h1>
+            <h2>Cuisine MOMO</h2>
 
-            <h2>Cégep Montmorency</h2>
+            <h3>Cégep Montmorency</h3>
         </section>
         <nav>
             <ul>
@@ -24,24 +24,25 @@
             </ul>
         </nav>
     </header>
-    <header id="header-deux">
-        <p>
+    <header id="headerDeux">
+        <p id="ariane">
             <a href="../../index.html">Accueil</a> > <a href="../recettes.html">Recettes</a> >
             Poutine maison classique
         </p>
-        <section>
+        <h1>Poutine maison classique</h1>
+        <section id="infos">
             <div>
-                <h4>4</h4>
+                <h2>4</h2>
                 <p>portions</p>
             </div>
 
             <div>
-                <h4>40</h4>
+                <h2>40</h2>
                 <p>minutes</p>
             </div>
 
             <div>
-                <h4>Facile</h4>
+                <h2>Facile</h2>
                 <p>difficulté</p>
             </div>
         </section>
@@ -53,7 +54,7 @@
             </div>
             <div>
                 <section>
-                    <h4>Ingrédients</h4>
+                    <h3>Ingrédients</h3>
                     <ul>
                         <li>1 kg de frites croustillantes (maison ou surgelées)</li>
                         <li>300 g de fromage en grains</li>
@@ -66,7 +67,7 @@
                 </section>
 
                 <section>
-                    <h4>Étapes</h4>
+                    <h3>Étapes</h3>
                     <ol>
                         <li>Préparez les frites au four ou à la friteuse.</li>
                         <li>
@@ -83,7 +84,7 @@
                 </section>
 
                 <section>
-                    <h4>Conseils</h4>
+                    <h3>Conseils</h3>
                     <div id="Conseils">
                         <ul>
                             <li>
@@ -99,7 +100,9 @@
                 </section>
             </div>
         </article>
-        <button type="button">← Retour aux recettes</button>
+        <a href="../recettes.html" class="bouton"
+            ><div class="bouton-contenu">← Retour aux recettes</div></a
+        >
     </main>
 
     <footer>
@@ -110,14 +113,16 @@
         </section>
         <section>
             <h3>Contact</h3>
-            <a href="tel:(450) 975-6100">Téléphone:</a>
-            <a href="mailto:info@cuisine-momo.ca">Courriel:</a>
+            <a href="tel:(450)975-6100">Téléphone: <span>(450) 975-6100</span></a>
+            <a href="mailto:info@cuisine-momo.ca">Courriel: <span>info@cuisine-momo.ca</span></a>
         </section>
         <section>
             <h3>Liens rapides</h3>
-            <li><a href="pages/recettes.html">Recettes</a></li>
-            <li><a href="pages/techniques.html">Techniques</a></li>
-            <li><a href="pages/recettes.html">Recettes</a></li>
+            <ul>
+                <li><a href="pages/recettes.html">Recettes</a></li>
+                <li><a href="pages/techniques.html">Techniques</a></li>
+                <li><a href="pages/recettes.html">Recettes</a></li>
+            </ul>
         </section>
         <p>© 2025 Cuisine MOMO - Cégep Montmorency</p>
     </footer>

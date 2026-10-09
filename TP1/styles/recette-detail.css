@@ -3,7 +3,8 @@ img {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+h2,
+h3 {
     color: var(--primary-color);
 }
 
@@ -27,7 +28,22 @@ button:hover {
     background-color: #5a6268;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+    #headerDeux {
+        text-align: center; /* Comment bien Centrer?*/
+        margin: 0 auto;
+    }
+
+    #infos {
+        justify-self: center;
+    }
+
+    article {
+        margin: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
     article {
         display: grid;
         grid-template-columns: 1fr;
@@ -36,11 +52,59 @@ button:hover {
     img {
         width: 100%;
     }
+    #headerDeux {
+        text-align: center; /* Comment bien Centrer?*/
+        margin: 0 auto;
+    }
+    #headerDeux #ariane,
+    h1 {
+        text-align: left;
+    }
+    #info {
+        justify-self: left;
+    }
 }
 
 @media (min-width: 1024px) {
+    #headerDeux {
+        text-align: center; /* Comment bien Centrer?*/
+        margin: 0 auto;
+    }
+    #headerDeux #ariane,
+    h1 {
+        text-align: left;
+    }
     article {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin: 30px;
     }
+
+    #info {
+        justify-self: left;
+    }
+}
+
+#infos {
+    display: flex;
+    gap: 10px;
+}
+
+#headerDeux {
+    width: 100%;
+    background-color: lightgray;
+}
+
+#ariane a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+#ariane a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+}
+
+#headerDeux {
+    padding-left: 5px;
 }
