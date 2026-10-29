@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1 - Convertisseur de température</title>
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/q1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Question 1 - Variables, types, expressions</h1>
+
+        <div class="exercise">
+            <h2>Convertisseur</h2>
+            <input id="c" type="number" placeholder="°C">
+            <button id="go">Convertir</button>
+            <p id="out"></p>
+        </div>
+
+        <div class="instructions">
+            <h3>Travail à réaliser</h3>
+            <ul>
+                <li>Complétez <code>convertirCelsiusVersfahrenheit(celsius)</code>. Elle reçoit une température et retourne sa conversion avec la formule <code>celsius * 9 / 5 + 32</code>.</li>
+                <li>Au clic sur Convertir, utilisez la valeur de <code>#c</code> et affichez les deux températures dans <code>#out</code>.</li>
+                <li>Si le champ est vide, affichez <code>Veuillez entrer une valeur</code>. La température <code>0</code> doit être acceptée.</li>
+            </ul>
+            <h4>Contraintes</h4>
+            <p>Utilisez une fonction de conversion, un événement <code>click</code> et une conversion de la saisie en nombre. L'affichage doit rester du texte.</p>
+            <h4>Exemple d'affichage</h4>
+            <p><code>25°C = 77°F</code></p>
+        </div>
+
+        <div class="navigation">
+            <a href="../index.html">← Accueil</a>
+            <a href="/questions/q2.html">Question 2 →</a>
+        </div>
+    </div>
+
+    <script type="module" src="../scripts/q1.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4 - Manipulation du DOM</title>
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/q4.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Question 4 - Manipulation du DOM</h1>
+
+        <div class="content">
+            <h2>Liste de fruits</h2>
+            <ul id="fruits">
+                <li>Pomme</li>
+                <li>Banane</li>
+                <li>Orange</li>
+            </ul>
+            <p id="out"></p>
+
+            <hr>
+
+            <div id="zone">
+                <h3>Zone d'insertion</h3>
+            </div>
+            <button id="addHead">Ajouter en tête</button>
+            <button id="addTail">Ajouter en fin</button>
+
+            <hr>
+
+            <div id="cards">
+                <div class="card">Modèle</div>
+            </div>
+            <button id="cloner">Cloner</button>
+            <button id="remplacer">Remplacer le 1er</button>
+            <button id="vider">Supprimer tout</button>
+
+            <hr>
+
+            <ol id="steps">
+                <li>Étape 1</li>
+                <li>Étape 2</li>
+                <li>Étape 3</li>
+            </ol>
+            <button id="ins2">Insérer avant Étape 2</button>
+        </div>
+
+        <div class="instructions">
+            <h3>Travail à réaliser</h3>
+            <h4>1 - Navigation</h4>
+            <p>Dans <code>#out</code>, affichez le texte du premier fruit, du dernier et du voisin suivant le premier. Utilisez les relations du DOM : <code>firstElementChild</code>, <code>lastElementChild</code>, <code>children</code> et <code>nextElementSibling</code>.</p>
+            <p>Format : <code>Premier : ... | Dernier : ... | Après le 1er : ...</code></p>
+
+            <h4>2 - Insertion</h4>
+            <ul>
+                <li>« Ajouter en tête » ajoute un paragraphe <code>(tête)</code> au début de <code>#zone</code>.</li>
+                <li>« Ajouter en fin » ajoute un paragraphe <code>(fin)</code> à la fin de cette zone.</li>
+                <li>Utilisez <code>createElement()</code>, <code>prepend()</code> et <code>append()</code>.</li>
+            </ul>
+
+            <h4>3 - Cartes</h4>
+            <ul>
+                <li>« Cloner » ajoute une copie d'une carte avec un nouveau texte : <code>Card #2</code>, <code>Card #3</code>, etc.</li>
+                <li>« Remplacer le 1er » remplace la première carte par une nouvelle carte contenant <code>Remplacement</code>.</li>
+                <li>« Supprimer tout » retire toutes les cartes.</li>
+                <li>Utilisez <code>cloneNode(true)</code>, <code>replaceWith()</code> et <code>remove()</code>.</li>
+            </ul>
+
+            <h4>4 - Position précise</h4>
+            <p>« Insérer avant Étape 2 » ajoute un <code>&lt;li&gt;</code> contenant <code>Étape 1.5</code> avant le deuxième élément de <code>#steps</code>. Utilisez <code>before()</code>.</p>
+            <p>Les actions doivent modifier les éléments existants, sans reconstruire toute la zone avec <code>innerHTML</code>.</p>
+        </div>
+
+        <div class="navigation">
+            <a href="/questions/q3.html">← Question 3</a>
+            <a href="/">Accueil</a>
+            <a href="/questions/q5.html">Question 5 →</a>
+        </div>
+    </div>
+    <script type="module" src="/scripts/q4.js"></script>
+</body>
+</html>

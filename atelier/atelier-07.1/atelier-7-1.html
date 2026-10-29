@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Atelier 7.1 - DOM, sélecteurs et manipulation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        --accent: #2563eb;
+        --ok: #16a34a;
+        --warn: #f59e0b;
+        --bg: #f7f7fb;
+        --card: #ffffff;
+        --muted: #6b7280;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+          Arial, sans-serif;
+        line-height: 1.5;
+        margin: 0;
+        background: var(--bg);
+        color: #111827;
+      }
+      header {
+        padding: 24px;
+        background: #111827;
+        color: #fff;
+      }
+      header h1 {
+        margin: 0 0 8px;
+        font-size: 1.4rem;
+      }
+      header p {
+        margin: 0;
+        color: #cbd5e1;
+      }
+      main {
+        max-width: 1000px;
+        margin: 24px auto;
+        padding: 0 16px 48px;
+      }
+
+      .ex {
+        background: var(--card);
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 16px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+      }
+      .ex h2 {
+        margin: 0 0 8px;
+        font-size: 1.05rem;
+      }
+      .consigne {
+        margin: 8px 0 12px;
+        color: var(--muted);
+      }
+      .zone {
+        border: 1px dashed #d1d5db;
+        padding: 12px;
+        border-radius: 8px;
+        background: #fafafa;
+      }
+      .row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+        list-style: none;
+      }
+      button,
+      input[type='submit'] {
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid #d1d5db;
+        background: #fff;
+        cursor: pointer;
+      }
+      button.primary {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
+      }
+      .badge {
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 999px;
+        background: #eef2ff;
+        color: #3730a3;
+        font-size: 0.8rem;
+      }
+      .card {
+        border: 2px solid #94a3b8;
+        border-radius: 10px;
+        padding: 12px;
+        background: #f8fafc;
+        transition: transform 0.25s ease, background 0.25s ease;
+      }
+      .ouvert {
+        transform: scale(1.03);
+        background: #fffbe6;
+      }
+      .cache {
+        display: none;
+      }
+      .ok {
+        color: var(--ok);
+      }
+      .warn {
+        color: var(--warn);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 10px;
+      }
+      img.thumb {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 8px;
+        border: 1px solid #e5e7eb;
+      }
+      label {
+        display: block;
+        margin: 6px 0 2px;
+      }
+      input[type='text'],
+      input[type='email'],
+      input[type='number'] {
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid #d1d5db;
+        width: 100%;
+      }
+      code {
+        background: #f3f4f6;
+        padding: 2px 6px;
+        border-radius: 6px;
+      }
+      .log {
+        min-height: 28px;
+        padding: 6px 8px;
+        background: #f3f4f6;
+        border-radius: 6px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+      .fruit.actif { background: #dcfce7; color: #166534; padding: 4px 8px; border-radius: 6px; }
+    </style>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Atelier 7.1 - DOM, sélecteurs et manipulation (7 exercices)</h1>
+      <p>En lien avec la théorie 7.1. Les manipulations s’exécutent au chargement : aucun écouteur d’événement n’est nécessaire. Écrire le JavaScript dans un fichier <code>app.js</code> placé dans le même dossier. Il est déjà relié dans le <code>head</code> avec <code>defer</code>. Ne pas modifier le HTML ni le CSS.</p>
+    </header>
+    <main>
+      <!-- Ex 1 -->
+      <section class="ex" id="ex1">
+        <h2>Exercice 1 - Sélecteurs (querySelector / querySelectorAll)</h2>
+        <p class="consigne">
+          Tâches JS : (a) sélectionner le <code>premier &lt;p&gt;</code> et le
+          mettre en vert, (b) sélectionner <code>tous les .fruit</code> et leur
+          ajouter la classe <code>actif</code>.
+        </p>
+        <div class="zone">
+          <div class="row">
+            <p>Paragraphe A</p>
+            <p>Paragraphe B</p>
+          </div>
+          <ul class="row" aria-label="liste de fruits">
+            <li class="fruit">Pomme</li>
+            <li class="fruit">Banane</li>
+            <li class="fruit">Orange</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Ex 2 -->
+      <section class="ex" id="ex2">
+        <h2>Exercice 2 - Traversal (parents / enfants / voisins)</h2>
+        <p class="consigne">
+          Tâches JS : remplir <code>#out2</code> avec (1) le texte du premier
+          enfant, (2) du dernier, (3) du voisin suivant de l’élément d’index 0.
+        </p>
+        <div class="zone">
+          <ul id="fruits2">
+            <li>Pomme</li>
+            <li>Banane</li>
+            <li>Orange</li>
+            <li>Kiwi</li>
+          </ul>
+          <div id="out2" class="log" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- Ex 3 -->
+      <section class="ex" id="ex3">
+        <h2>Exercice 3 - textContent vs innerHTML</h2>
+        <p class="consigne">
+          Tâches JS : afficher dans <code>#log3</code> la différence entre
+          <code>textContent</code> et <code>innerHTML</code> de
+          <code>#bloc3</code>. Puis remplacer le contenu avec
+          <code>textContent</code> (texte brut) et ensuite avec
+          <code>innerHTML</code> (incluant balises).
+        </p>
+        <div id="bloc3" class="zone">
+          Bonjour <strong>le DOM</strong> - <em>attention</em> aux
+          balises&nbsp;!
+        </div>
+        <div id="log3" class="log" aria-live="polite"></div>
+      </section>
+
+      <!-- Ex 4 -->
+      <section class="ex" id="ex4">
+        <h2>Exercice 4 - style vs getComputedStyle</h2>
+        <p class="consigne">
+          Tâches JS : appliquer dynamiquement un <code>padding</code> de
+          <code>12px</code> en inline, puis afficher dans <code>#out4</code> le
+          <em>padding calculé</em> via <code>getComputedStyle()</code>.
+        </p>
+        <div id="box4" class="zone card" style="background: #e2e8f0">
+          Boîte de test
+        </div>
+        <div id="out4" class="log" aria-live="polite"></div>
+      </section>
+
+      <section class="ex" id="ex5">
+        <h2>Exercice 5 - Attributs (get / set / has)</h2>
+        <p class="consigne">Si l’attribut <code>alt</code> de <code>#img5</code> est absent ou vide, le définir à «Image de démonstration». Remplacer sa source par <code>https://picsum.photos/seed/dom2/200/130</code>, puis afficher les attributs <code>src</code> et <code>alt</code> dans <code>#out5</code>. Tout doit se faire dès le chargement, sans clic.</p>
+        <div class="zone"><img id="img5" class="thumb" src="https://picsum.photos/seed/dom1/200/130" alt=""><div id="out5" class="log"></div></div>
+      </section>
+
+      <section class="ex" id="ex6">
+        <h2>Exercice 6 - Créer et insérer des éléments</h2>
+        <p class="consigne">À partir du tableau <code>["Pomme", "Banane", "Orange"]</code>, créer trois éléments <code>li</code> avec <code>createElement()</code> et <code>textContent</code>, puis les ajouter à <code>#liste6</code> avec <code>append()</code>. Ajouter «Kiwi» en tête avec <code>prepend()</code>. Créer deux paragraphes «Début de la liste» et «Fin de la liste», puis les insérer avant et après la liste avec <code>before()</code> et <code>after()</code>.</p>
+        <div class="zone"><ul id="liste6"></ul></div>
+      </section>
+
+      <section class="ex" id="ex7">
+        <h2>Exercice 7 - Supprimer et remplacer des éléments</h2>
+        <p class="consigne">Retirer <code>#obsolete7</code> avec <code>remove()</code>. Créer un nouveau bloc avec le texte «Profil complété» et les classes <code>card ok</code>, puis remplacer <code>#alerte7</code> avec <code>replaceWith()</code>. Ces deux opérations doivent se faire dès le chargement, sans bouton.</p>
+        <div class="zone"><p id="obsolete7">Ce message est obsolète.</p><div id="alerte7" class="card" role="alert">Attention : complétez votre profil.</div></div>
+      </section>
+
+    </main>
+  </body>
+</html>

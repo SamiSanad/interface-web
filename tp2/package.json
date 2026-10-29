@@ -1,0 +1,29 @@
+{
+  "name": "tp-javascript",
+  "private": true,
+  "version": "3.0.0",
+  "type": "module",
+  "engines": {
+    "node": "^22.12.0 || ^24.0.0 || >=26.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:test": "vite --host 127.0.0.1 --port 5187 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "start-server-and-test dev:test http://127.0.0.1:5187 \"cypress run\"",
+    "test:watch": "start-server-and-test dev:test http://127.0.0.1:5187 \"cypress open --e2e\"",
+    "test:q1": "start-server-and-test dev:test http://127.0.0.1:5187 \"cypress run --spec cypress/e2e/q1.cy.js\"",
+    "test:q2": "start-server-and-test dev:test http://127.0.0.1:5187 \"cypress run --spec cypress/e2e/q2.cy.js\"",
+    "test:q3": "start-server-and-test dev:test http://127.0.0.1:5187 \"cypress run --spec cypress/e2e/q3.cy.js\"",
+    "test:q4": "start-server-and-test dev:test http://127.0.0.1:5187 \"cypress run --spec cypress/e2e/q4.cy.js\"",
+    "test:q5": "start-server-and-test dev:test http://127.0.0.1:5187 \"cypress run --spec cypress/e2e/q5.cy.js\"",
+    "test:q6": "start-server-and-test dev:test http://127.0.0.1:5187 \"cypress run --spec cypress/e2e/q6.cy.js\""
+  },
+  "devDependencies": {
+    "cypress": "16.1.1",
+    "acorn": "8.19.0",
+    "vite": "8.3.4",
+    "start-server-and-test": "3.0.13"
+  }
+}

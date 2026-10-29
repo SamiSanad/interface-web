@@ -1,0 +1,20 @@
+#recettes {
+  padding-left: 24px;
+}
+
+#recettes li {
+  padding: 4px 0;
+}
+
+#recettes li.loading {
+  padding: 8px;
+  border-left: 3px solid #577290;
+  background: #f0f4f8;
+}
+
+#recettes li.error {
+  padding: 8px;
+  border-left: 3px solid #9c2222;
+  background: #fff3f3;
+  color: #9c2222;
+}

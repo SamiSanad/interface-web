@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 6 - Appels API avec fetch</title>
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/q6.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Question 6 - Appels API avec fetch et async/await</h1>
+
+        <div class="content">
+            <h2>Recettes depuis une API</h2>
+            <button id="charger">Charger 3 recettes</button>
+            <ul id="recettes"></ul>
+        </div>
+
+        <div class="instructions">
+            <h3>Travail à réaliser</h3>
+            <ul>
+                <li>Complétez <code>chargerRecettes()</code> pour charger trois recettes depuis <code>https://dummyjson.com/recipes?limit=3</code>.</li>
+                <li>Le bouton Charger déclenche cette fonction.</li>
+                <li>Affichez un message pendant le chargement.</li>
+                <li>Affichez chaque recette dans un <code>&lt;li&gt;</code> de <code>#recettes</code>, avec son nom, sa durée et sa cuisine.</li>
+                <li>Un nouveau chargement remplace le contenu précédent.</li>
+                <li>En cas d'erreur réseau ou HTTP, affichez un message clair dans la page.</li>
+            </ul>
+            <h4>Contraintes</h4>
+            <p>Utilisez <code>fetch()</code>, <code>async/await</code> et <code>try/catch</code>. Vérifiez <code>response.ok</code>. Les recettes doivent être ajoutées avec les méthodes du DOM.</p>
+            <h4>Format d'affichage</h4>
+            <p><code>Nom de la recette - X min - Type de cuisine</code></p>
+            <h4>Bonus - Effet de chargement</h4>
+            <p>Utilisez la classe CSS <code>loading</code> pour ajouter un effet visuel au message de chargement. Ce bonus est facultatif.</p>
+        </div>
+
+        <div class="navigation">
+            <a href="/questions/q5.html">← Question 5</a>
+            <a href="/">Accueil</a>
+        </div>
+    </div>
+    <script type="module" src="/scripts/q6.js"></script>
+</body>
+</html>

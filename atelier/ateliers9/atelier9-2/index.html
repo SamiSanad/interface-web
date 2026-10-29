@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Atelier - Flux d'événements (capture, target, bulle)</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        background: #f6f8fb;
+        text-align: center;
+        padding: 20px;
+      }
+      .boite {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid #444;
+        border-radius: 10px;
+        margin: 15px auto;
+        font-size: 1.2rem;
+        color: white;
+        cursor: pointer;
+        user-select: none;
+      }
+      #grand {
+        width: 400px;
+        height: 400px;
+        background: #457b9d;
+      }
+      #moyen {
+        width: 250px;
+        height: 250px;
+        background: #e76f51;
+      }
+      #petit {
+        width: 120px;
+        height: 120px;
+        background: #2a9d8f;
+      }
+
+      #log {
+        text-align: left;
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 10px;
+        height: 150px;
+        width: 420px;
+        margin: 20px auto;
+        overflow-y: auto;
+        font-family: ui-monospace, monospace;
+        border-radius: 8px;
+      }
+      #clear {
+        border: none;
+        background: #264653;
+        color: white;
+        padding: 6px 14px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.9rem;
+      }
+      #clear:hover {
+        background: #2a9d8f;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Atelier – Flux d’événements (Capture → Cible → Bulle)</h1>
+    <p>
+      Cliquez sur une boîte pour voir l’ordre d’exécution des gestionnaires.
+    </p>
+
+    <div id="grand" class="boite">
+      GRAND
+      <div id="moyen" class="boite">
+        MOYEN
+        <div id="petit" class="boite">PETIT</div>
+      </div>
+    </div>
+
+    <button id="clear">Effacer le log</button>
+    <div id="log"></div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

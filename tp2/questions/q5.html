@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5 - Données numériques et gestion du temps</title>
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/q5.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Question 5 - Données numériques et gestion du temps</h1>
+
+        <div class="content">
+            <p class="counter-display">Compteur: <span id="n">0</span></p>
+            <div class="button-group">
+                <button id="start">Start</button>
+                <button id="stop">Stop</button>
+                <button id="double">×2</button>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>Travail à réaliser</h3>
+            <ul>
+                <li>Start démarre un compteur qui augmente de <code>1</code> chaque seconde. Affichez sa valeur dans <code>#n</code>.</li>
+                <li>Plusieurs clics sur Start ne doivent pas accélérer le compteur.</li>
+                <li>Stop arrête le compteur sans remettre sa valeur à zéro.</li>
+                <li>Après Stop, Start reprend le comptage à partir de la valeur conservée.</li>
+            </ul>
+            <h4>Contraintes</h4>
+            <p>Utilisez <code>setInterval()</code> et <code>clearInterval()</code>. Gérez l'état du compteur avec des variables.</p>
+            <h4>Bonus - Bouton ×2</h4>
+            <p>Le bouton ×2 double la valeur actuelle, même pendant le comptage. Ce bonus est facultatif.</p>
+        </div>
+
+        <div class="navigation">
+            <a href="/questions/q4.html">← Question 4</a>
+            <a href="/">Accueil</a>
+            <a href="/questions/q6.html">Question 6 →</a>
+        </div>
+    </div>
+    <script type="module" src="/scripts/q5.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3 - Objets et tableaux</title>
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/q3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Question 3 - Objets et tableaux</h1>
+
+        <div class="content">
+            <h2>Jeux courts</h2>
+            <ul id="liste-court"></ul>
+            <h2>Jeux longs</h2>
+            <ul id="liste-long"></ul>
+        </div>
+
+        <div class="instructions">
+            <h3>Travail à réaliser</h3>
+            <ul>
+                <li>Déclarez le tableau <code>jeux</code> fourni ci-dessous.</li>
+                <li>Complétez <code>afficherJeux(listeJeux, elementUl)</code>. Cette fonction doit pouvoir afficher une liste de jeux dans le parent reçu.</li>
+                <li>Affichez les jeux de moins de 60 minutes dans <code>#liste-court</code>.</li>
+                <li>Affichez les jeux de 60 minutes ou plus dans <code>#liste-long</code>.</li>
+                <li>Chaque jeu doit apparaître dans un <code>&lt;li&gt;</code>, au format <code>nom (duree min)</code>.</li>
+            </ul>
+            <h4>Contraintes</h4>
+            <p>Utilisez <code>filter()</code> pour le filtrage et <code>forEach()</code> pour le parcours. Construisez les items avec les méthodes du DOM, sans <code>innerHTML</code>.</p>
+            <pre><code>const jeux = [
+  { nom: "Azul", duree: 45 },
+  { nom: "Catan", duree: 90 },
+  { nom: "Agricola", duree: 120 },
+  { nom: "Far Away", duree: 25 },
+  { nom: "Flip 7", duree: 20 },
+  { nom: "Ticket to ride", duree: 45 }
+];</code></pre>
+        </div>
+
+        <div class="navigation">
+            <a href="/questions/q2.html">← Question 2</a>
+            <a href="/">Accueil</a>
+            <a href="/questions/q4.html">Question 4 →</a>
+        </div>
+    </div>
+    <script type="module" src="/scripts/q3.js"></script>
+</body>
+</html>

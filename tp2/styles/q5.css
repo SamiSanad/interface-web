@@ -1,0 +1,18 @@
+.counter-display {
+  margin: 20px 0 16px;
+  font-size: 20px;
+}
+
+#n {
+  display: inline-block;
+  min-width: 3ch;
+  font-size: 32px;
+  font-weight: bold;
+  font-variant-numeric: tabular-nums;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
