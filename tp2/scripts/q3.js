@@ -5,12 +5,12 @@
 
 // TODO: Déclarez le tableau d'objets jeux
 const jeux = [
-  { nom: "Azul", duree: 45 },
-  { nom: "Catan", duree: 90 },
-  { nom: "Agricola", duree: 120 },
-  { nom: "Far Away", duree: 25 },
-  { nom: "Flip 7", duree: 20 },
-  { nom: "Ticket to ride", duree: 45 }
+    { nom: 'Azul', duree: 45 },
+    { nom: 'Catan', duree: 90 },
+    { nom: 'Agricola', duree: 120 },
+    { nom: 'Far Away', duree: 25 },
+    { nom: 'Flip 7', duree: 20 },
+    { nom: 'Ticket to ride', duree: 45 },
 ];
 
 /**
@@ -23,11 +23,10 @@ function afficherJeux(listeJeux, elementUl) {
     // Format: <li>nom (duree min)</li>
 
     listeJeux.forEach((jeu) => {
-        const item = document.createElement("li");
-        item.textContent = jeu.nom + "(" + jeu.duree + " min)";
+        const item = document.createElement('li');
+        item.textContent = jeu.nom + ' (' + jeu.duree + ' min)';
         elementUl.append(item);
-    } )
-    
+    });
 }
 
 /**
@@ -35,8 +34,8 @@ function afficherJeux(listeJeux, elementUl) {
  */
 function initialiser() {
     // TODO: Récupérer les éléments DOM (#liste-court, #liste-long)
-    const listeCourt = document.querySelector("#liste-court");
-    const listeLong = document.querySelector("#liste-long");
+    const listeCourt = document.querySelector('#liste-court');
+    const listeLong = document.querySelector('#liste-long');
     // TODO: Filtrer les jeux courts (moins de 60 minutes)
     const courts = jeux.filter((jeu) => jeu.duree < 60);
     // TODO: Filtrer les jeux longs (60 minutes ou plus)
