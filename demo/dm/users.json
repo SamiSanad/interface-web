@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "prenom": "Simon",
+    "nom": "Gagnon",
+    "role": "etudiant",
+    "courriel": "simon.gagnon@coursinfo.ca",
+    "ville": "Laval",
+    "actif": true
+  },
+  {
+    "id": 2,
+    "prenom": "Samira",
+    "nom": "Hilal",
+    "role": "etudiant",
+    "courriel": "samira.Hilal@coursinfo.ca",
+    "ville": "Montréal",
+    "actif": true
+  },
+  {
+    "id": 3,
+    "prenom": "Camille",
+    "nom": "Tremblay",
+    "role": "enseignant",
+    "courriel": "camille.tremblay@coursinfo.ca",
+    "ville": "Terrebonne",
+    "actif": true
+  },
+  {
+    "id": 4,
+    "prenom": "Jérémie",
+    "nom": "Renaud",
+    "role": "etudiant",
+    "courriel": "jeremie.renaud@coursinfo.ca",
+    "ville": "Longueuil",
+    "actif": false
+  },
+  {
+    "id": 5,
+    "prenom": "Diane",
+    "nom": "Dussault",
+    "role": "administrateur",
+    "courriel": "diane.dussaultoy@coursinfo.ca",
+    "ville": "Laval",
+    "actif": true
+  }
+]
