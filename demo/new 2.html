@@ -1,0 +1,124 @@
+html:
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 50%;
+    padding: 0.75rem;
+  }
+</style>
+
+<h1>Inscription au cours</h1>
+
+<form id="formInscription">
+  <label for="nom">Nom</label>
+  <input id="nom" name="nom" type="text" minlength="2" required />
+
+  <label for="courriel">Courriel</label>
+  <input id="courriel" name="courriel" type="email" requires />
+
+  <label>
+    <input name="infolettre" type="checkbox" />
+    Je souhaite recevoir l'infolettre
+  </label>
+
+  <fieldset>
+    <legend>Cours souhaités</legend>
+
+    <label>
+      <input name="cours" type="checkbox" value="interface-web" />
+      Interface Web
+    </label>
+
+    <label>
+      <input name="cours" type="checkbox" value="structures-donnees" />
+      Structures de données
+    </label>
+  </fieldset>
+
+  <div id="zoneHoraire" hidden>
+    <label for="horaire">Horaire préféré</label>
+    <select id="horaire" name="horaire" required disabled>
+      <option value="">Choisir un horaire</option>
+      <option value="jour">De jour</option>
+      <option value="soir">De soir</option>
+    </select>
+  </div>
+
+  <button id="btnSubmit" type="submit" disabled>S'inscrire</button>
+</form>
+
+<button id="btnExterne" type="button">Valider et envoyer</button>
+
+<p id="message"></p>
+
+
+
+
+
+
+
+
+script:
+const form = document.querySelector('#formInscription');
+const inputEmail = document.querySelector('[name="courriel"]');
+const inputInfolettre = document.querySelector('[name="infolettre"]');
+const casesCours = document.querySelectorAll('[name="cours"]');
+const zoneHoraire = document.querySelector('#zoneHoraire');
+const selectHoraire = document.querySelector('#horaire');
+const btnSubmit = document.querySelector('#btnSubmit');
+const btnExterne = document.querySelector('#btnExterne');
+const message = document.querySelector('#message');
+
+function validerCourrielInfo(){
+	inputEmail.setCustomValidity('');
+	if(inputInfolettre.checked && inputEmail.value.trim()===''){
+		inputEmail.setCustomValidity('Ajouter un courriel pour avoir infolettre');
+		return true;
+	}
+}
+
+inputInfolettre.addEventListener('change', ()=>{
+	if(!validerCourrielInfo()){
+		inputEmail.reportValidity();
+	}
+	console.log('valid?', inputEmail.validity.valid);
+	console.log('customError?', inputEmail.validity.customError);
+	btnSubmit.disabled = !form.checkValidity();
+})
+
+inputEmail.addEventListener('blur', () => {
+	validerCourrielInfo();
+	inputEmail.reportValidity();
+	console.log('valid?', inputEmail.validity.valid;
+	console.log('vide?', inputEmail.validity.valueMissing;
+	console.log('courriel?', inputEmail.validity.typeMissmatch;
+});
+
+btnExterne.addEventListener('click', () => {
+/*if(form.reportValidity()) {
+console.log('Envoyer le formulaire');
+}/*
+const fd = new FormData(form);
+const valeurChampNom = fd.get('nom');
+const valeurCaseCours = fd.getAll('infolettre'); //Met tous les champs dans une liste (si plusieurs cases à cocher sont sélectionnées par exemple)
+const monObjetForm = Object.fromEntries(fd.entries()); //Donne liste de tous les trucs dans le formulaire
+monObjetForm.cours = fd.getAll('cours');
+
+console.log(monObjetForm);
+});
+
+function mettreAJourHoraire(){
+	const fd = new FormData(form);
+	const valeurCaseCours = fd.getAll('cours');
+	
+	zoneHoraire.hidden = !valeurCaseCours.length;
+	selectHoraire.disabled = !valeurCaseCours.length;
+}
+casesCours.forEach((caseCours) => {
+caseCours.addEventListener('change', mettreAJourHoraire);
+});
+form.addEventListener('input', ()=> {
+	btnSubmit.disabled = !form.checkValidity(); 
+})

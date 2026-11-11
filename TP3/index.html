@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil et identification</title>
+    <script src="index.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <img src="assets/images/logoMomo.png" alt="logo du Collège Montmorency">
+        <nav>
+            <li><a href="index.html"></a>Accueil et identification</li>
+            <li><a href="jeu.html"></a>Règles</li>
+            <li><a href="regles.html"></a>Jouer</li>
+        </nav>
+        <img src="assets/images/hero.jpg" alt="bannière hero avec symboles mathématiques">
+    </header>
+
+    <main>
+        <h1>Bienvenue au challenge de calcul mental de Sami Sanad !</h1>
+        <h2>Pour commencer à jouer, remplissez le formulaire ci-dessous :</h2>
+        <form action="resultat.html" method="get">                                  <!--Changer nom du résultat si nécessaire!!!!!!!!!!!-->
+            <!-- Champs ici -->
+            <label for="nomJoueur">Entrez le nom du joueur</label>
+            <input id="nomJoueur" name="nom" type="text">
+
+            <input type="checkbox" id="opAdSou" name="operations" value="additions-soustractions">
+            <label for="opAdSou">Additions/Soustractions</label>
+
+            <input type="checkbox" id="opMulDiv" name="operations" value="multiplications-divisions">
+            <label for="opAdSou">Multiplications/Divisions</label>
+            <button type="submit">Confirmer et jouer</button>
+
+        </form>
+
+        <table>
+            <caption>Meilleurs scores</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Position</th>
+                    <th scope="col">Joueur</th>
+                    <th scope="col">Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1.</th>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">2.</th>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">3.</th>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">4.</th>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">5.</th>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <img src="assets/images/logoMomo.png" alt="logo du Collège Montmorency">
+        Challenge de calcul mental de Sami Sanad
+    </footer>
+</body>
+</html>
