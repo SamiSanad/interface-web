@@ -1,0 +1,44 @@
+index.HTML
+
+body
+<div id = "maDivDate"> </div>
+
+Copier
+<form id="formDate">
+  <label for="dateCours">Date et heure du cours</label>
+  <input id="dateCours" type="datetime-local"
+         value="2026-11-05T10:30" required>
+	<label for="dateModifier">Date et heure à modifier</label>
+<input id="dateModifier" type="datetime-local">
+
+  <button type="submit">Convertir en UTC</button>
+</form>
+<p id="resultatUTC"></p>
+
+
+
+script
+	function toInputDTLValue(date) {
+  const offset = date.getTimezoneOffset() * 60000; // Minutes vers millisecondes
+  return new Date(date.getTime() - offset).toISOString().slice(0, 16);
+}
+
+const dateUTC = "2026-11-05T15:30:00Z";
+const date = new Date(dateUTC);
+console.log(date.getTime());
+
+
+const champModifier = document.querySelector('#dateModifier')
+champModifier.value = toInputDTLValue(date);#
+
+champ.value = toInputDTLValue(date);
+console.log(champ.value);
+
+
+
+const form = document.querySelector('#formDate');
+const resultatUTC = document.querySelector('#formDate');
+const dateCours = document.querySelector('#formDate');
+});
+script
+body

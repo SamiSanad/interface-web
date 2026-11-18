@@ -1,0 +1,72 @@
+body
+button class="bouton" charger les résultats bouton
+
+<p>
+  <span class="icone">●</span>
+  span class="loader"
+  Chargement en cours...
+</p>
+
+body
+
+style
+
+@keyframes tourner {
+from {
+	transform: rotate(0deg);
+	
+}
+to {
+	transform: rotate(360deg);
+	
+}
+}
+.loader {
+display: inline-block;
+width: 20px;
+height: 20px;
+border: 3px solid blue;
+border-left-colo0r: lightblue;
+border-radius:50%;
+animation: tourner 1s linear infinite
+}
+
+@media (prefers-reduced-motion) {
+.loader{
+animation:none;
+}
+}
+@keyframes pulsation {
+	0%{
+		transform: scale(1);
+	}
+	
+	50%{
+		transform: scale(1.5);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+.icone {
+	display: inline-block;
+	color: #b12222;
+	animation: pulsion 1.5s ease-in-out infinite;
+}
+
+
+
+	.bouton{
+		padding: 12px 20px;
+		border: 0;
+		border-radius: 6px;
+		background-color: #003b7a
+		color: #ffffff
+		transition: background-color 300ms ease;
+	}
+	
+	.bouton:hover {
+		background-color: #ff2e60;
+	}
+style

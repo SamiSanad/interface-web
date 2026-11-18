@@ -1,0 +1,45 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contenu {
+    display: flex;
+}
+
+button {
+    max-width: 275px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: x-large;
+}
+
+input {
+    height: 35px;
+    font-size: x-large; /*Comment agrandir les checkboxes?????????!!!!!!!!!!!!!!!!! */
+}
+h1 {
+    font-size: 50px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-size: xx-large;
+    color: limegreen;
+    margin-top: 10px;
+}
+label {
+    font-weight: bold;
+    font-size: x-large;
+    
+}
+
+.case {
+    font-size: 3rem;
+    line-height: 1.1;
+    display:  grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+    align-items: center;
+}
